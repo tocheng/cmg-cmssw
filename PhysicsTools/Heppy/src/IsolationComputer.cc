@@ -63,6 +63,11 @@ float heppy::IsolationComputer::chargedAbsIso(const reco::Candidate &cand, float
     return isoSumRaw(charged_, cand, dR, innerR, threshold, selfVeto);
 }
 
+/// Isolation from charged Hadron from the PV 
+float heppy::IsolationComputer::chargedHadAbsIso(const reco::Candidate &cand, float dR, float innerR, float threshold, SelfVetoPolicy selfVeto) const {
+    return isoSumRaw(charged_, cand, dR, innerR, threshold, selfVeto, 211);
+}
+
 /// Isolation from charged from PU
 float heppy::IsolationComputer::puAbsIso(const reco::Candidate &cand, float dR, float innerR, float threshold, SelfVetoPolicy selfVeto) const {
     return isoSumRaw(pileup_, cand, dR, innerR, threshold, selfVeto);
