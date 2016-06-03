@@ -27,6 +27,9 @@ class IsolationComputer {
         /// Isolation from charged from the PV 
         float chargedAbsIso(const reco::Candidate &cand, float dR, float innerR=0, float threshold=0, SelfVetoPolicy selfVeto=selfVetoAll) const ;
 
+        /// Isolation from charged Hadron from the PV 
+        float chargedHadAbsIso(const reco::Candidate &cand, float dR, float innerR=0, float threshold=0, SelfVetoPolicy selfVeto=selfVetoAll) const ;
+
         /// Isolation from charged from PU
         float puAbsIso(const reco::Candidate &cand, float dR, float innerR=0, float threshold=0, SelfVetoPolicy selfVeto=selfVetoAll) const ;
 
