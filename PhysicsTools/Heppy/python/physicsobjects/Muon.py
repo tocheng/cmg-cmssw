@@ -134,3 +134,16 @@ class Muon( Lepton ):
     def ptErr(self):
         if "_ptErr" in self.__dict__: return self.__dict__['_ptErr']
         return self.bestTrack().ptError()
+
+    def TuneP_pt(self):
+        return self.physObj.tunePMuonBestTrack().pt()
+
+    def TuneP_eta(self):
+        return self.physObj.tunePMuonBestTrack().eta()
+
+    def TuneP_phi(self):
+        return self.physObj.tunePMuonBestTrack().phi()
+
+    def TuneP_m(self):
+        return .105
+
