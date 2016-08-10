@@ -147,3 +147,10 @@ class Muon( Lepton ):
     def TuneP_m(self):
         return .105
 
+    def TuneP_ptErr(self):
+        return self.physObj.tunePMuonBestTrack().ptError()
+
+    def TuneP_type(self):
+        return self.physObj.tunePMuonBestTrackType()
+
+    
