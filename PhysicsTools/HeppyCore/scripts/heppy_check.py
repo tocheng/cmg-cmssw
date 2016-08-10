@@ -17,6 +17,11 @@ parser.add_option("-b","--batch", dest="batch",
                   help="batch command for resubmission"
                   )
 
+parser.add_option("-o","--outpath", dest="outpath",
+                  default=None,
+                  help="directory to copy output jobs"
+                  )
+
 (options,args) = parser.parse_args()
 
 if len(args)==0:
@@ -48,6 +53,17 @@ for dir in dirs:
     elif nEvents == 0:
         print dir, '0 events'
     else:
+        if options.outpath is not None:
+            cmds = 'mkdir -p '+options.outpath
+            print cmds
+            os.system( cmds )
+            cmds = 'cp -rp '+dir+' '+options.outpath+'/'
+            print cmds
+            os.system( cmds )
+            cmds = 'rm -rf '+dir
+            print cmds
+            os.system( cmds )            
+            os.system( cmds )            
         continue
     badDirs.append(dir)
 

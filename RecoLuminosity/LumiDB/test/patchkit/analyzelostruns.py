@@ -70,7 +70,7 @@ def fetchOldData(schema,oldlumidataid):
         qHandle.defineOutput(qResult)
         qHandle.setCondition(qConditionStr,qCondition)
         cursor=qHandle.execute()
-        while next(cursor):
+        while cursor.next():
             lumilsnum=cursor.currentRow()['lumilsnum'].data()
             beamstatus=cursor.currentRow()['beamstatus'].data()
             beamenergy=cursor.currentRow()['beamenergy'].data()

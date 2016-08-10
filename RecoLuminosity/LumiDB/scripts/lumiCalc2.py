@@ -339,13 +339,19 @@ if __name__ == '__main__':
             print '[INFO] No qualified hlt data found for run ',irun
         #    continue
         rruns.append(irun)
+
+    print "irunlsdict.keys() = ", irunlsdict.keys()
+    print "rruns = ", rruns
+
     if not irunlsdict: #no file
+        print "line 314: if not irunlsdict: #no file"
         irunlsdict=dict(list(zip(rruns,[None]*len(rruns))))
     else:
         for selectedrun in irunlsdict.keys():#if there's further filter on the runlist,clean input dict
             if selectedrun not in rruns:
                 del irunlsdict[selectedrun]
     if not irunlsdict:
+        print "line 350: if not irunlsdict:"
         print '[INFO] No qualified run found, do nothing'
         sys.exit(13)
 

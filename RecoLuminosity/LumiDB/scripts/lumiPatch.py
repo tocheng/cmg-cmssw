@@ -47,7 +47,7 @@ def missingTimeRuns(dbsession,c):
         queryOutput.extend('runnum','unsigned int')
         query.defineOutput(queryOutput)
         cursor=query.execute()
-        while next(cursor):
+        while cursor.next():
             result.append(cursor.currentRow()['runnum'].data())
         del query
         dbsession.transaction().commit()
@@ -223,7 +223,7 @@ def GTdeadtimeBeamActiveForRun(dbsession,c,runnum):
         query.defineOutput(deadOutput)
 
         cursor=query.execute()
-        while next(cursor):
+        while cursor.next():
             cmslsnum=cursor.currentRow()['lsnr'].data()
             deadcount=cursor.currentRow()['deadcount'].data()
             result[cmslsnum]=deadcount
@@ -267,7 +267,7 @@ def WBMdeadtimeBeamActiveForRun(dbsession,c,runnum):
         query.defineOutput(deadOutput)
         
         cursor=query.execute()
-        while next(cursor):
+        while cursor.next():
             cmslsnum=cursor.currentRow()['lsnr'].data()
             deadcount=cursor.currentRow()['deadcount'].data()
             result[cmslsnum]=deadcount
