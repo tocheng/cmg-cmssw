@@ -24,7 +24,9 @@ class KalmanMuonCorrector:
                 newPtErr = newPt * self.kamuca.getCorrectedErrorAfterSmearing(newPt, mu.eta(), newPtErr/newPt)
         newP4 = ROOT.math.PtEtaPhiMLorentzVector(newPt, mu.eta(), mu.phi(), mu.mass())
         mu.setP4(newP4)
-        mu._ptErr = newPtErr
+        # changed by Hengne Li, see comments in Muon.py
+        #mu._ptErr = newPtErr
+        mu.setPtErr(newPtErr)
 
     def correct_all(self, mus, run):
         for mu in mus:
