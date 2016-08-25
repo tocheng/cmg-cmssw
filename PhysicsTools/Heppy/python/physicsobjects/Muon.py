@@ -1,6 +1,5 @@
 from PhysicsTools.Heppy.physicsobjects.Lepton import Lepton
 from PhysicsTools.HeppyCore.utils.deltar import deltaR
-from ctypes import c_double
 import ROOT
 
 class Muon( Lepton ):
@@ -17,7 +16,7 @@ class Muon( Lepton ):
         self._tunep_muon_p4 = ROOT.math.PtEtaPhiMLorentzVector(self.physObj.tunePMuonBestTrack().pt(),
                         self.physObj.tunePMuonBestTrack().eta(),
                         self.physObj.tunePMuonBestTrack().phi(),
-                        self.physObj.mass())
+                        self.physObj.mass()) if self.physObj.tunePMuonBestTrack() else self._pf_muon_p4
         # pt err
         self._pf_ptErr = self.physObj.bestTrack().ptError()
         self._tunep_ptErr = self.physObj.tunePMuonBestTrack().ptError()       
@@ -219,19 +218,23 @@ class Muon( Lepton ):
         else: self._pf_ptErr = newPtErr
 
     def TuneP_pt(self):
-        return self.physObj.tunePMuonBestTrack().pt()
+        if self.physObj.tunePMuonBestTrack(): return self.physObj.tunePMuonBestTrack().pt()
+        else: return self.physObj.pt()
 
     def TuneP_eta(self):
-        return self.physObj.tunePMuonBestTrack().eta()
+        if self.physObj.tunePMuonBestTrack(): return self.physObj.tunePMuonBestTrack().eta()
+        else: return self.physObj.eta()
 
     def TuneP_phi(self):
-        return self.physObj.tunePMuonBestTrack().phi()
+        if self.physObj.tunePMuonBestTrack(): return self.physObj.tunePMuonBestTrack().phi()
+        else: return self.physObj.phi()
 
     def TuneP_m(self):
         return .105
 
     def TuneP_ptErr(self):
-        return self.physObj.tunePMuonBestTrack().ptError()
+        if self.physObj.tunePMuonBestTrack(): return self.physObj.tunePMuonBestTrack().ptError()
+        else: return self.physObj.ptErr()
 
     def TuneP_type(self):
         return self.physObj.tunePMuonBestTrackType()
