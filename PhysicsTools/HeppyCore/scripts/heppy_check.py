@@ -34,8 +34,8 @@ badDirs = []
 for dir in dirs:
     if not os.path.isdir(dir):
         continue
-    if dir.find('_Chunk') == -1:
-        continue
+    #if dir.find('_Chunk') == -1:
+    #    continue
     logName  = '/'.join([dir, 'log.txt'])
     if not os.path.isfile( logName ):
         print dir, ': log.txt does not exist'

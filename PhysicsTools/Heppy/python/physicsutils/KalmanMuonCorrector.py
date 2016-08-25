@@ -9,22 +9,21 @@ class KalmanMuonCorrector:
         self.smearMode = smearMode
     def correct(self, mu, run):
         newPt = self.kamuca.getCorrectedPt(mu.pt(), mu.eta(), mu.phi(), mu.charge())
-        newPtErr = newPt * self.kamuca.getCorrectedError(newPt, mu.eta(), mu.ptErr()/newPt)
         if self.isMC: # new we do the smearing
             if self.isSync:
                 newPt = self.kamuca.smearForSync(newPt, mu.eta())
-                newPtErr = newPt * self.kamuca.getCorrectedErrorAfterSmearing(newPt, mu.eta(), newPtErr/newPt)
             elif self.smearMode == "none" or self.smearMode == None:
                 pass
-            elif self.smearMode == "basic":
-                newPt = self.kamuca.smear(newPt, mu.eta())
-                newPtErr = newPt * self.kamuca.getCorrectedErrorAfterSmearing(newPt, mu.eta(), newPtErr/newPt)
             else:
-                newPt = self.kamuca.smearUsingEbE(newPt, mu.eta(), newPtErr/newPt)
-                newPtErr = newPt * self.kamuca.getCorrectedErrorAfterSmearing(newPt, mu.eta(), newPtErr/newPt)
+                newPt = self.kamuca.smear(newPt, mu.eta())
+
+        newPtErr = newPt * self.kamuca.getCorrectedError(newPt, mu.eta(), mu.ptErr()/newPt)
+
         newP4 = ROOT.math.PtEtaPhiMLorentzVector(newPt, mu.eta(), mu.phi(), mu.mass())
         mu.setP4(newP4)
-        mu._ptErr = newPtErr
+        # changed by Hengne Li, see comments in Muon.py
+        #mu._ptErr = newPtErr
+        mu.setPtErr(newPtErr)
 
     def correct_all(self, mus, run):
         for mu in mus:
