@@ -33,7 +33,7 @@ class Event(object):
             recursive = False
             if hasattr(value, '__getitem__') and \
                not isinstance(value, collections.Mapping) and \
-               (len(value)>0 and value[0].__class__ == value.__class__):
+               (len(value[:10])>0 and value[0].__class__ == value.__class__):
                     recursive = True
             if hasattr(value, '__contains__') and \
                    not isinstance(value, (str,unicode)) and \
