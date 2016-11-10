@@ -98,7 +98,10 @@ class Jet(PhysicsObject):
 
     def jetID(self,name=""):
         if not self.isPFJet():
-            raise RuntimeError("jetID implemented only for PF Jets")
+            #raise RuntimeError("jetID implemented only for PF Jets")
+            print "WARNING:: jetID implemented only for PF Jets, return False"
+            return False
+
         eta = abs(self.eta());
         energy = self.rawEnergy();
         chf = self.chargedHadronEnergy()/energy;
@@ -130,7 +133,9 @@ class Jet(PhysicsObject):
         if name == "PAG_monoID_Loose":    return (eta<3.0 and chf>0.05 and nhf<0.7 and phf<0.8);
         if name == "PAG_monoID_Tight":    return (eta<3.0 and chf>0.2 and nhf<0.7 and phf<0.7);
 
-        raise RuntimeError, "jetID '%s' not supported" % name
+        #raise RuntimeError, "jetID '%s' not supported" % name
+        print "jetID '"+name+"' not supported, return False" 
+        return False
 
     def looseJetId(self):
         '''PF Jet ID (loose operation point) [method provided for convenience only]'''

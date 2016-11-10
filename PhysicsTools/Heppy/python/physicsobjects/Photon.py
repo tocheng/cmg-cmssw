@@ -15,7 +15,6 @@ class Photon(PhysicsObject ):
     def _physObjInit(self):
         self.rho = None
 
-
     def hOVERe(self):
         return self.physObj.hadTowOverEm() 
 

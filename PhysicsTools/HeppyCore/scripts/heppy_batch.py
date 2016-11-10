@@ -143,6 +143,7 @@ fi
 #BSUB -q 8nm
 echo 'environment:'
 echo
+export X509_USER_PROXY=$HOME/myproxy
 env | sort
 # ulimit -v 3000000 # NO
 echo 'copying job dir to worker'
@@ -306,6 +307,7 @@ class MyBatchManager( BatchManager ):
        storeDir = self.remoteOutputDir_.replace('/castor/cern.ch/cms','')
        mode = self.RunningMode(options.batch)
        if mode == 'LXPLUS':
+           os.system('cp `voms-proxy-info -p` $HOME/myproxy')
            scriptFile.write( batchScriptCERN( jobDir, storeDir ) ) 
        elif mode == 'PSI':
            scriptFile.write( batchScriptPSI ( value, jobDir, storeDir ) ) # storeDir not implemented at the moment

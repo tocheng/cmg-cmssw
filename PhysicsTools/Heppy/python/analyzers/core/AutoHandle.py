@@ -22,7 +22,8 @@ class AutoHandle( Handle, object ):
         if not self.isLoaded :
                 self.ReallyLoad(self.event)
                 self.isLoaded=True
-        return super(AutoHandle,self).product()
+        if self.disabled: return False
+        else: return super(AutoHandle,self).product()
 
     def Load(self, event):  #is actually a reset state
         self.event=event

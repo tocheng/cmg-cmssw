@@ -22,7 +22,7 @@ class Lepton( PhysicsObject):
 
     def relIso(self, dBetaFactor=0, allCharged=0):
         '''Relative isolation with default cone size of 0.4.'''
-        rel = self.absIsoR(dBetaFactor=dBetaFactor, allCharged=allCharged)/self.pt()
+        rel = self.absIsoR(dBetaFactor=dBetaFactor, allCharged=allCharged)/(self.pt() if self.pt()>0.0 else 0.00000000001)
         return rel
 
     def absIsoR(self, R=0.4, dBetaFactor=0, allCharged=False):
@@ -37,7 +37,7 @@ class Lepton( PhysicsObject):
         return charged + max(corNeutralIso, 0.)
 
     def relIsoR(self, R=0.4, dBetaFactor=0, allCharged=False):
-        return self.absIsoR(R, dBetaFactor, allCharged)/self.pt()
+        return self.absIsoR(R, dBetaFactor, allCharged)/(self.pt() if self.pt()>0.0 else 0.00000000001)
 
     def lostInner(self):
         if hasattr(self.innerTrack(),"trackerExpectedHitsInner") :

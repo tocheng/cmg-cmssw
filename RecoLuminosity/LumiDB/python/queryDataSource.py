@@ -144,7 +144,7 @@ def hltFromOldLumi(session,runnumber):
         qHandle.defineOutput(qResult)
         qHandle.setCondition('RUNNUM=:runnum',qCondition)
         cursor=qHandle.execute()
-        while next(cursor):
+        while cursor.next():
             npath=cursor.currentRow()['npath'].data()
         del qHandle
         #print 'npath ',npath
@@ -176,7 +176,7 @@ def hltFromOldLumi(session,runnumber):
         prescaleArray=array.array('I')
         ipath=0
         pathnHLT_PixelTracksVdMames=''
-        while next(cursor):
+        while cursor.next():
             cmslsnum=cursor.currentRow()['cmslsnum'].data()
             pathname=cursor.currentRow()['pathname'].data()
             ipath+=1
@@ -235,7 +235,7 @@ def trgFromOldLumi(session,runnumber):
         cursor=qHandle.execute()
         bitnums=[]
         bitnameList=[]
-        while next(cursor):
+        while cursor.next():
             bitnum=cursor.currentRow()['bitnum'].data()
             bitname=cursor.currentRow()['bitname'].data()
             bitnums.append(bitnum)
@@ -267,7 +267,7 @@ def trgFromOldLumi(session,runnumber):
         cursor=qHandle.execute()
         trgcountArray=array.array('I')
         prescaleArray=array.array('I')
-        while next(cursor):
+        while cursor.next():
             cmslsnum=cursor.currentRow()['cmslsnum'].data()
             bitnum=cursor.currentRow()['bitnum'].data()
             deadtime=cursor.currentRow()['deadtime'].data()
@@ -726,7 +726,7 @@ def hltFromRuninfoV2(session,runnumber):
         hltinputs=array.array('I')
         hltaccepts=array.array('I')
         prescales=array.array('I')
-        while next(cursor):
+        while cursor.next():
             row=cursor.currentRow()
             cmsluminr=row['lsnumber'].data()
             hltinput=row['hltinput'].data()
@@ -807,7 +807,7 @@ def hltconf(session,hltkey):
         hltconfQuery.setCondition('PARAMETERS.PARAMID=STRINGPARAMVALUES.PARAMID AND SUPERIDPARAMETERASSOC.PARAMID=PARAMETERS.PARAMID AND MODULES.SUPERID=SUPERIDPARAMETERASSOC.SUPERID AND MODULETEMPLATES.SUPERID=MODULES.TEMPLATEID AND PATHMODULEASSOC.MODULEID=MODULES.SUPERID AND PATHS.PATHID=PATHMODULEASSOC.PATHID AND CONFIGURATIONPATHASSOC.PATHID=PATHS.PATHID AND CONFIGURATIONS.CONFIGID=CONFIGURATIONPATHASSOC.CONFIGID AND MODULETEMPLATES.NAME=:hltseed AND PARAMETERS.NAME=:l1seedexpr AND CONFIGURATIONS.CONFIGDESCRIPTOR=:hltkey',hltconfBindVar)
         hlt2l1map={}
         cursor=hltconfQuery.execute()
-        while next(cursor):
+        while cursor.next():
             hltpath=cursor.currentRow()['hltpath'].data()
             print hltpath
             l1expression=cursor.currentRow()['l1expression'].data()
@@ -860,7 +860,7 @@ def runsummary(session,schemaname,runnumber,complementalOnly=False):
         l1keyQuery.setCondition('NAME=:name AND RUNNUMBER=:runnumber',l1keyCondition)
         l1keyQuery.defineOutput(l1keyOutput)
         cursor=l1keyQuery.execute()
-        while next(cursor):
+        while cursor.next():
             l1key=cursor.currentRow()['l1key'].data()
         del l1keyQuery
         result.append(l1key)
@@ -879,7 +879,7 @@ def runsummary(session,schemaname,runnumber,complementalOnly=False):
         amodetagQuery.limitReturnedRows(1)
         amodetagQuery.defineOutput(amodetagOutput)
         cursor=amodetagQuery.execute()
-        while next(cursor):
+        while cursor.next():
             amodetag=cursor.currentRow()['amodetag'].data()
         del amodetagQuery
         result.append(amodetag)
@@ -899,7 +899,7 @@ def runsummary(session,schemaname,runnumber,complementalOnly=False):
         egevQuery.defineOutput(egevOutput)
         egevQuery.addToOrderList('SESSION_ID')
         cursor=egevQuery.execute()
-        while next(cursor):
+        while cursor.next():
             egev=cursor.currentRow()['egev'].data()
         del egevQuery
         result.append(egev)
@@ -918,7 +918,7 @@ def runsummary(session,schemaname,runnumber,complementalOnly=False):
             seqQuery.setCondition('NAME=:name AND RUNNUMBER=:runnumber',seqCondition)
             seqQuery.defineOutput(seqOutput)
             cursor=seqQuery.execute()
-            while next(cursor):
+            while cursor.next():
                 sequence=cursor.currentRow()['seq'].data()
             del seqQuery
             result.append(sequence)
@@ -937,7 +937,7 @@ def runsummary(session,schemaname,runnumber,complementalOnly=False):
             #hltkeyQuery.limitReturnedRows(1)
             hltkeyQuery.defineOutput(hltkeyOutput)
             cursor=hltkeyQuery.execute()
-            while next(cursor):
+            while cursor.next():
                 hltkey=cursor.currentRow()['hltkey'].data()
                 del hltkeyQuery
             result.append(hltkey)
@@ -956,7 +956,7 @@ def runsummary(session,schemaname,runnumber,complementalOnly=False):
             fillnumQuery.limitReturnedRows(1)
             fillnumQuery.defineOutput(fillnumOutput)
             cursor=fillnumQuery.execute()
-            while next(cursor):
+            while cursor.next():
                 fillnum=cursor.currentRow()['fillnum'].data()
             del fillnumQuery
             result.append(fillnum)
@@ -974,7 +974,7 @@ def runsummary(session,schemaname,runnumber,complementalOnly=False):
             starttimeQuery.setCondition('NAME=:name AND RUNNUMBER=:runnumber',starttimeCondition)
             starttimeQuery.defineOutput(starttimeOutput)
             cursor=starttimeQuery.execute()
-            while next(cursor):
+            while cursor.next():
                 starttime=cursor.currentRow()['starttime'].data()
             del starttimeQuery
             result.append(starttime)
@@ -992,7 +992,7 @@ def runsummary(session,schemaname,runnumber,complementalOnly=False):
             stoptimeQuery.setCondition('NAME=:name AND RUNNUMBER=:runnumber',stoptimeCondition)
             stoptimeQuery.defineOutput(stoptimeOutput)
             cursor=stoptimeQuery.execute()
-            while next(cursor):
+            while cursor.next():
                 stoptime=cursor.currentRow()['stoptime'].data()
             del stoptimeQuery
             result.append(stoptime)

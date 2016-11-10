@@ -23,7 +23,7 @@ class idDealer(object):
             query.setForUpdate() #lock it
             cursor = query.execute()
             result = 0
-            while ( next(cursor) ):
+            while ( cursor.next() ):
                 result = cursor.currentRow()[self.__idTableColumnName].data()
             del query
             return result
@@ -43,7 +43,7 @@ class idDealer(object):
             query.setForUpdate() #lock it
             cursor = query.execute()
             result = 0
-            while ( next(cursor) ):
+            while ( cursor.next() ):
                 result = cursor.currentRow()[0].data()
             dataEditor = tableHandle.dataEditor()
             inputData = coral.AttributeList()

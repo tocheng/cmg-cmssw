@@ -60,7 +60,7 @@ class dbUtil(object):
             query.setCondition(condition,queryBind)
             cursor = query.execute()
             result=False
-            while ( next(cursor) ):
+            while ( cursor.next() ):
                 result=True
                 cursor.close()
             del query
