@@ -1,11 +1,68 @@
 from PhysicsTools.Heppy.physicsobjects.Lepton import Lepton
 from PhysicsTools.HeppyCore.utils.deltar import deltaR
+import ROOT
 
 class Muon( Lepton ):
 
     def __init__(self, *args, **kwargs):
         super(Muon, self).__init__(*args, **kwargs)
         self._trackForDxyDz = "muonBestTrack"
+        self._muonUseTuneP = False
+        # store pf muon and tunep muon 4vectors for inter-change
+        self._pf_muon_p4 = ROOT.math.PtEtaPhiMLorentzVector(self.physObj.pt(),
+                        self.physObj.eta(),
+                        self.physObj.phi(),
+                        self.physObj.mass())
+        self._tunep_muon_p4 = ROOT.math.PtEtaPhiMLorentzVector(self.physObj.tunePMuonBestTrack().pt(),
+                        self.physObj.tunePMuonBestTrack().eta(),
+                        self.physObj.tunePMuonBestTrack().phi(),
+                        self.physObj.mass()) if self.physObj.tunePMuonBestTrack() else self._pf_muon_p4
+        # pt err
+        self._pf_ptErr = self.physObj.bestTrack().ptError()
+        self._tunep_ptErr = self.physObj.tunePMuonBestTrack().ptError()       
+
+    def setMuonUseTuneP(self,muonUseTuneP=True):
+        # Comments by Hengne Li:
+        # restore the corresponding p4 when pfmuon and tunep muon are inter-changed
+        # only do the exchange when necessary.. 
+        if muonUseTuneP and not self._muonUseTuneP:
+            self.physObj.setP4(self._tunep_muon_p4)
+        elif not muonUseTuneP and self._muonUseTuneP:
+            self.physObj.setP4(self._pf_muon_p4)
+        self._muonUseTuneP = muonUseTuneP
+
+    def setP4(self,newP4):
+        # Comments by Hengne Li:
+        #  when you re-calib the p4, will apply to the corrent physObj,
+        # and will also change the pfmuon/tunepmuon internal p4 accordingly
+        # e.g. if you re-calib muon when muonUseTuneP is True, it will also
+        # apply the re-calib to the internal tunepmuon, but will NOT change
+        # the internal pfmuon p4. 
+        # So, if you want to recalib both, you need to setMuonUseTuneP(True/False),
+        #  and calibrate once more.
+        # and due to tricky problems, one has to redefine a PtEtaPhiMLorentzVector 
+        self.physObj.setP4(newP4)
+        newP4 = ROOT.math.PtEtaPhiMLorentzVector(self.physObj.pt(),
+                        self.physObj.eta(),
+                        self.physObj.phi(),
+                        self.physObj.mass())
+        if self._muonUseTuneP: self._tunep_muon_p4 = newP4
+        else: self._pf_muon_p4 = newP4
+
+    def setPz(self,newPz):
+        # Comments by Hengne Li:
+        # same comments in setP4 applies here. 
+        # no setPx/y needed, since reco::Candidate doesn't have those functions.
+        # and due to tricky problems, one has to redefine a PtEtaPhiMLorentzVector
+        #  instead of the ROOT::Math::LorentzVector<xxx>::SetPz(xx), which doesn't 
+        #  work for unknown reasons so far...  
+        self.physObj.setPz(newPz)
+        newP4 = ROOT.math.PtEtaPhiMLorentzVector(self.physObj.pt(),
+                        self.physObj.eta(),
+                        self.physObj.phi(),
+                        self.physObj.mass())
+        if self._muonUseTuneP: self._tunep_muon_p4 = newP4
+        else: self._pf_muon_p4 = newP4
 
     def setTrackForDxyDz(self,what):
         if not hasattr(self,what):
@@ -35,6 +92,13 @@ class Muon( Lepton ):
             if name == "POG_ID_Tight":  return self.physObj.isTightMuon(vertex)
             if name == "POG_ID_HighPt": return self.physObj.isHighPtMuon(vertex)
             if name == "POG_ID_Soft":   return self.physObj.isSoftMuon(vertex)
+            if name == "POG_ID_Soft_ICHEP":
+                if not self.physObj.muonID("TMOneStationTight"): return False
+                if not self.physObj.innerTrack().hitPattern().trackerLayersWithMeasurement() > 5: return False
+                if not self.physObj.innerTrack().hitPattern().pixelLayersWithMeasurement() > 0: return False
+                if not abs(self.physObj.innerTrack().dxy(vertex.position())) < 0.3 : return False
+                if not abs(self.physObj.innerTrack().dz(vertex.position())) < 20 : return False
+                return True
             if name == "POG_ID_TightNoVtx":  return self.looseId() and \
                                                  self.isGlobalMuon() and \
                                                  self.globalTrack().normalizedChi2() < 10 and \
@@ -46,8 +110,26 @@ class Muon( Lepton ):
                 if not self.looseId(): return False
                 goodGlb = self.physObj.isGlobalMuon() and self.physObj.globalTrack().normalizedChi2() < 3 and self.physObj.combinedQuality().chi2LocalPosition < 12 and self.physObj.combinedQuality().trkKink < 20;
                 return self.physObj.innerTrack().validFraction() > 0.8 and self.physObj.segmentCompatibility() >= (0.303 if goodGlb else 0.451)
+            if name == "POG_ID_Medium_ICHEP":
+                #validFraction() > 0.49 changed from 0.8
+                if not self.looseId(): return False
+                goodGlb = self.physObj.isGlobalMuon() and self.physObj.globalTrack().normalizedChi2() < 3 and self.physObj.combinedQuality().chi2LocalPosition < 12 and self.physObj.combinedQuality().trkKink < 20;
+                return self.physObj.innerTrack().validFraction() > 0.49 and self.physObj.segmentCompatibility() >= (0.303 if goodGlb else 0.451)
+
             if name == "POG_Global_OR_TMArbitrated":
                 return self.physObj.isGlobalMuon() or (self.physObj.isTrackerMuon() and self.physObj.numberOfMatchedStations() > 0)
+        elif name.startswith("HZZ_"):
+            if name == "HZZ_ID_TkHighPt":
+                primaryVertex = vertex if vertex != None else getattr(self, 'associatedVertex', None) 
+                return ( self.physObj.numberOfMatchedStations() > 1 
+                         and (self.physObj.muonBestTrack().ptError()/self.physObj.muonBestTrack().pt()) < 0.3 
+                         and abs(self.physObj.muonBestTrack().dxy(primaryVertex.position())) < 0.2 
+                         and abs(self.physObj.muonBestTrack().dz(primaryVertex.position())) < 0.5 
+                         and self.physObj.innerTrack().hitPattern().numberOfValidPixelHits() > 0 
+                         and self.physObj.innerTrack().hitPattern().trackerLayersWithMeasurement() > 5 )
+            if name == "HZZ_ID_LooseOrTkHighPt":
+                if self.physObj.isLooseMuon(): return True
+                return self.physObj.pt() > 200 and self.muonID("HZZ_ID_TkHighPt")
         return self.physObj.muonID(name)
             
     def mvaId(self):
@@ -132,5 +214,40 @@ class Muon( Lepton ):
         return self.chargedHadronIsoR(R)+max(0.,photonIso+self.neutralHadronIsoR(R)-offset)            
 
     def ptErr(self):
-        if "_ptErr" in self.__dict__: return self.__dict__['_ptErr']
-        return self.bestTrack().ptError()
+        # Comments by Hengne Li:
+        # KalmanMuonCorrector changed accordingly, use setPtErr(xx) to set this value
+        #if "_ptErr" in self.__dict__: return self.__dict__['_ptErr']
+        if self._muonUseTuneP: return self._tunep_ptErr
+        else: return self._pf_ptErr
+
+    def setPtErr(self,newPtErr):
+        if self._muonUseTuneP: self._tunep_ptErr = newPtErr
+        else: self._pf_ptErr = newPtErr
+
+    def TuneP_pt(self):
+        if self.physObj.tunePMuonBestTrack(): return self.physObj.tunePMuonBestTrack().pt()
+        else: return self.physObj.pt()
+
+    def TuneP_eta(self):
+        if self.physObj.tunePMuonBestTrack(): return self.physObj.tunePMuonBestTrack().eta()
+        else: return self.physObj.eta()
+
+    def TuneP_phi(self):
+        if self.physObj.tunePMuonBestTrack(): return self.physObj.tunePMuonBestTrack().phi()
+        else: return self.physObj.phi()
+
+    def TuneP_m(self):
+        return .105
+
+    def TuneP_ptErr(self):
+        if self.physObj.tunePMuonBestTrack(): return self.physObj.tunePMuonBestTrack().ptError()
+        else: return self.physObj.ptErr()
+
+    def TuneP_type(self):
+        return self.physObj.tunePMuonBestTrackType()
+
+
+
+
+
+ 

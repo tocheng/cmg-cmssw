@@ -446,8 +446,10 @@ class JetAnalyzer( Analyzer ):
     def smearJets(self, event, jets):
         # https://twiki.cern.ch/twiki/bin/viewauth/CMS/TWikiTopRefSyst#Jet_energy_resolution
        for jet in jets:
-            gen = jet.mcJet 
-            if gen != None:
+           #gen = jet.mcJet 
+           #if gen != None:
+           if hasattr(jet, "mcJet") and jet.mcJet!=None:
+               gen = jet.mcJet
                genpt, jetpt, aeta = gen.pt(), jet.pt(), abs(jet.eta())
                # from https://twiki.cern.ch/twiki/bin/view/CMS/JetResolution
                #8 TeV tables
