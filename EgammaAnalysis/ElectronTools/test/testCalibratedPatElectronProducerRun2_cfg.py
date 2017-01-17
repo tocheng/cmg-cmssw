@@ -64,7 +64,6 @@ else:
 from Configuration.AlCa.GlobalTag_condDBv2 import GlobalTag
 #process.GlobalTag = GlobalTag(process.GlobalTag, '74X_dataRun2_Prompt_v4', '')
 
-
 if varOptions.isMC:
     process.GlobalTag = GlobalTag(process.GlobalTag, 'auto:run2_mc'  , '')
 else:
