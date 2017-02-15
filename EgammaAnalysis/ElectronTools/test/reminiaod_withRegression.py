@@ -19,8 +19,13 @@ process.load('Configuration.StandardSequences.MagneticField_cff')
 process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
+process.MessageLogger = cms.Service("MessageLogger",
+       destinations   = cms.untracked.vstring('cout'),
+       cout           = cms.untracked.PSet(threshold  = cms.untracked.string('ERROR'))
+                                    )
+
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(100)
+    input = cms.untracked.int32(-1)
 )
 
 # Input source
@@ -61,20 +66,20 @@ process.MINIAODSIMoutput = cms.OutputModule("PoolOutputModule",
 
 # The regressions are in the conditions database starting at this versions
 from Configuration.AlCa.GlobalTag import GlobalTag
-process.GlobalTag = GlobalTag(process.GlobalTag, '80X_mcRun2_asymptotic_2016_TrancheIV_v7', '')
+process.GlobalTag = GlobalTag(process.GlobalTag, 'auto:run2_mc', '')
 
 # Other access methods:
 
 # Apply the regression from local sqlite file
-# from EgammaAnalysis.ElectronTools.regressionWeights_local_cfi import GBRDWrapperRcd
-# process.regressions           = GBRDWrapperRcd
-# process.es_prefer_regressions = cms.ESPrefer('PoolDBESSource','regressions')
-# process.load('EgammaAnalysis.ElectronTools.regressionApplication_cff')
-# process.EGMenergyCorrection = cms.Path(process.regressionApplication)
+#from EgammaAnalysis.ElectronTools.regressionWeights_local_cfi import GBRDWrapperRcd
+#process.regressions           = GBRDWrapperRcd
+#process.es_prefer_regressions = cms.ESPrefer('PoolDBESSource','regressions')
+#process.load('EgammaAnalysis.ElectronTools.regressionApplication_cff')
+#process.EGMenergyCorrection = cms.Path(process.regressionApplication)
 
 # Apply the regression from a remote database
-#from EgammaAnalysis.ElectronTools.regressionWeights_cfi import regressionWeights
-#process = regressionWeights(process)
+from EgammaAnalysis.ElectronTools.regressionWeights_cfi import regressionWeights
+process = regressionWeights(process)
 
 process.load('EgammaAnalysis.ElectronTools.regressionApplication_cff')
 process.EGMenergyCorrection = cms.Path(process.regressionApplication)
