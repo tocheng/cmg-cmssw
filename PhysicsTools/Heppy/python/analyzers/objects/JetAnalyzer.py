@@ -50,16 +50,14 @@ def cleanJetsAndLeptons(jets,leptons,deltaR,arbitration):
 
 
 def shiftJERfactor(JERShift, aeta):
-        factor = 1.079 + JERShift*0.026
-        if   aeta > 3.2: factor = 1.056 + JERShift * 0.191
+        factor = 1.109 + JERShift*0.008
+        if   aeta > 3.2: factor = 1.16 + JERShift * 0.029
         elif aeta > 2.8: factor = 1.395 + JERShift * 0.063
         elif aeta > 2.3: factor = 1.254 + JERShift * 0.062
         elif aeta > 1.7: factor = 1.208 + JERShift * 0.046
         elif aeta > 1.1: factor = 1.121 + JERShift * 0.029
         elif aeta > 0.5: factor = 1.099 + JERShift * 0.028
         return factor 
-
-
 
 
 
@@ -179,12 +177,9 @@ class JetAnalyzer( Analyzer ):
                 for igj, gj in enumerate(self.genJets):
                     gj.index = igj
 #                self.matchJets(event, allJets)
-                self.matchJets(event, [ j for j in allJets if j.pt()>self.cfg_ana.jetPt ]) # To match only jets above chosen threshold
+                self.matchJets(event, [ j for j in allJets if j.pt()>self.cfg_ana.jetPt ],self.jetLepDR*0.5) # To match only jets above chosen threshold
             if getattr(self.cfg_ana, 'smearJets', False):
                 self.smearJets(event, allJets)
-
-
-                
         
 	##Sort Jets by pT 
         allJets.sort(key = lambda j : j.pt(), reverse = True)
@@ -398,7 +393,7 @@ class JetAnalyzer( Analyzer ):
 
     def testJetID(self, jet):
         jet.puJetIdPassed = jet.puJetId() 
-        jet.pfJetIdPassed = jet.jetID('POG_PFID_Loose') 
+        jet.pfJetIdPassed = jet.jetID('POG_PFID_Loose') if jet.isPFJet() else False
         if self.cfg_ana.relaxJetId:
             return True
         else:
@@ -424,7 +419,7 @@ class JetAnalyzer( Analyzer ):
         self.partons   = [ p for p in event.genParticles if ((p.status() == 23 or p.status() == 3) and abs(p.pdgId())>0 and (abs(p.pdgId()) in [1,2,3,4,5,21]) ) ]
         match = matchObjectCollection2(self.cleanJetsAll,
                                        self.partons,
-                                       deltaRMax = 0.3)
+                                       self.jetLepDR*0.5)#deltaRMax = 0.3)
 
         for jet in self.cleanJetsAll:
             parton = match[jet]
@@ -433,21 +428,21 @@ class JetAnalyzer( Analyzer ):
         
         for jet in self.jets:
            (bmatch, dr) = bestMatch(jet, self.bqObjects)
-           if dr < 0.4:
+           if dr < self.jetLepDR: #0.4:
                jet.mcFlavour = 5
            else:
                (cmatch, dr) = bestMatch(jet, self.cqObjects) 
-               if dr < 0.4:
+               if dr < self.jetLepDR: #0.4:
                    jet.mcFlavour = 4
                else:
                    jet.mcFlavour = 0
 
         self.heaviestQCDFlavour = 5 if len(self.bqObjects) else (4 if len(self.cqObjects) else 1);
  
-    def matchJets(self, event, jets):
+    def matchJets(self, event, jets, deltaRMax):
         match = matchObjectCollection2(jets,
                                        event.genbquarks + event.genwzquarks,
-                                       deltaRMax = 0.3)
+                                       0.5*deltaRMax)
         for jet in jets:
             gen = match[jet]
             jet.mcParton    = gen
@@ -456,7 +451,7 @@ class JetAnalyzer( Analyzer ):
 
         match = matchObjectCollection2(jets,
                                        self.genJets,
-                                       deltaRMax = 0.3)
+                                       0.5*deltaRMax)
         for jet in jets:
             jet.mcJet = match[jet]
 
