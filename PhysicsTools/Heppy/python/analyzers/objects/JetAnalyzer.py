@@ -67,6 +67,7 @@ def shiftJERfactor(JERShift, aeta):
     return factor
 
 def hasCommonSourceCandidatePtr(o1,o2):
+
     for i in range(o1.numberOfSourceCandidatePtrs()):
         p1 = o1.sourceCandidatePtr(i)
         for j in range(o2.numberOfSourceCandidatePtrs()):
@@ -413,7 +414,8 @@ class JetAnalyzer( Analyzer ):
 
     def testJetID(self, jet):
         jet.puJetIdPassed = jet.puJetId()
-        jet.pfJetIdPassed = jet.jetID('POG_PFID_Tight')
+        #jet.pfJetIdPassed = jet.jetID('POG_PFID_Tight')
+        jet.pfJetIdPassed = jet.jetID('POG_PFID_Loose2016') if jet.isPFJet() else False
         if self.cfg_ana.relaxJetId:
             return True
         else:
