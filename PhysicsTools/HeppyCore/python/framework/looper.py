@@ -194,7 +194,7 @@ class Looper(object):
                 if at_firstEvent:
                     self.logger.info('processing first event')
                 self.process( iEv )
-                if iEv%100 ==0:
+                if iEv%1000 ==0:
                     # print 'event', iEv
                     if not hasattr(self,'start_time'):
                         print 'event', iEv
