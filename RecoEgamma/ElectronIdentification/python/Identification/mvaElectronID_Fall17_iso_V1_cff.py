@@ -160,10 +160,10 @@ variablesInfo = [
 varNames, clipLower, clipUpper = [list(l) for l in zip(*variablesInfo)]
 for i, x in enumerate(clipLower):
     if x == None:
-        clipLower[i] = -float('Inf')
+        clipLower[i] = -999999#-float('Inf')
 for i, x in enumerate(clipUpper):
     if x == None:
-        clipUpper[i] =  float('Inf')
+        clipUpper[i] =  999999#float('Inf')
 
 #
 # Finally, set up VID configuration for all cuts
