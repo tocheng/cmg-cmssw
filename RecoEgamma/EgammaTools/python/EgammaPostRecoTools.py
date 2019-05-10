@@ -10,14 +10,12 @@ _defaultEleIDModules =  [ 'RecoEgamma.ElectronIdentification.Identification.heep
                         'RecoEgamma.ElectronIdentification.Identification.mvaElectronID_Fall17_iso_V1_cff',
                         'RecoEgamma.ElectronIdentification.Identification.cutBasedElectronID_Summer16_80X_V1_cff',
                         'RecoEgamma.ElectronIdentification.Identification.mvaElectronID_Spring16_GeneralPurpose_V1_cff',
-                        'RecoEgamma.ElectronIdentification.Identification.mvaElectronID_Spring16_HZZ_V1_cff',
-                        ]
+                        'RecoEgamma.ElectronIdentification.Identification.mvaElectronID_Spring16_HZZ_V1_cff']
 _defaultPhoIDModules =  [ 'RecoEgamma.PhotonIdentification.Identification.cutBasedPhotonID_Fall17_94X_V1_TrueVtx_cff',
                         'RecoEgamma.PhotonIdentification.Identification.mvaPhotonID_Fall17_94X_V1_cff', 
-                        'RecoEgamma.PhotonIdentification.Identification.mvaPhotonID_Fall17_94X_V1p1_cff', 
+                        'RecoEgamma.PhotonIdentification.Identification.mvaPhotonID_Fall17_94X_V1p1_cff',
                         'RecoEgamma.PhotonIdentification.Identification.cutBasedPhotonID_Spring16_V2p2_cff',
-                        'RecoEgamma.PhotonIdentification.Identification.mvaPhotonID_Spring16_nonTrig_V1_cff'
-                        ]
+                        'RecoEgamma.PhotonIdentification.Identification.mvaPhotonID_Spring16_nonTrig_V1_cff']
 
 #the new Fall17V2 modules are loaded as default if they exist in the release
 #we do it this way as we can use the same script for all releases and people who
@@ -29,9 +27,10 @@ _fall17V2PhoCutIDModules = [
     'RecoEgamma.PhotonIdentification.Identification.cutBasedPhotonID_Fall17_94X_V2_cff'
     ]
 _fall17V2EleIDModules = [
+    'RecoEgamma.ElectronIdentification.Identification.heepElectronID_HEEPV70_cff',
     'RecoEgamma.ElectronIdentification.Identification.cutBasedElectronID_Fall17_94X_V2_cff',
-    'RecoEgamma.ElectronIdentification.Identification.mvaElectronID_Fall17_noIso_V2_cff',
-    'RecoEgamma.ElectronIdentification.Identification.mvaElectronID_Fall17_iso_V2_cff'
+    #'RecoEgamma.ElectronIdentification.Identification.mvaElectronID_Fall17_noIso_V2_cff',
+    #'RecoEgamma.ElectronIdentification.Identification.mvaElectronID_Fall17_iso_V2_cff'
     ]
 
 import pkgutil
@@ -72,7 +71,6 @@ def _getMVAsBeingRun(vidMod):
         for cut in id_.idDefinition.cutFlow:
             if cut.cutName.value().startswith("GsfEleMVA") or cut.cutName.value().startswith("PhoMVA"):
                 mvaValueName = cut.mvaValueMapName.getProductInstanceLabel().replace("RawValues","Values")
-                
                 mvasBeingRun.append({'val' : {'prod' : cut.mvaValueMapName.getModuleLabel(),'name' : mvaValueName}, 'cat' : {'prod' : cut.mvaCategoriesMapName.getModuleLabel(),'name' : cut.mvaCategoriesMapName.getProductInstanceLabel() }})
     return mvasBeingRun
                 
@@ -326,12 +324,12 @@ def _setupEgammaPostRECOSequenceMiniAOD(process,applyEnergyCorrections=False,app
 
 
 def setupEgammaPostRecoSeq(process,
-                           applyEnergyCorrections=False,
-                           applyVIDOnCorrectedEgamma=False,
+                           applyEnergyCorrections=True,#False,
+                           applyVIDOnCorrectedEgamma=True,#False,
                            isMiniAOD=True,
                            era="2017-Nov17ReReco",
-                           eleIDModules=_defaultEleIDModules,#_fall17V2EleIDModules,#_defaultEleIDModules,
-                           phoIDModules=_defaultPhoIDModules,#_fall17V2PhoCutIDModules,#_defaultPhoIDModules,
+                           eleIDModules=_fall17V2EleIDModules,#_fall17V2EleIDModules,#_defaultEleIDModules,
+                           phoIDModules=_fall17V2PhoCutIDModules,#_fall17V2PhoCutIDModules,#_defaultPhoIDModules,
                            runVID=True,
                            runEnergyCorrections=True,
                            applyEPCombBug=False,

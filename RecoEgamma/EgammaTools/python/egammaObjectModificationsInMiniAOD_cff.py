@@ -44,6 +44,7 @@ egamma_modifications = cms.VPSet(
 )
 
 #setup the mva value maps to embed
+'''
 setup_mva(egamma_modifications[0].electron_config,
           egamma_modifications[1].electron_config,
           ele_mva_prod_name,
@@ -103,6 +104,7 @@ setup_mva(egamma_modifications[0].photon_config,
           egamma_modifications[1].photon_config,
           pho_mva_prod_name,
           pho_fall17_94X_v1p1.mvaFall17v1p1ClassName+pho_fall17_94X_v1p1.mvaTag)
+'''
 
 #############################################################
 # REGRESSION MODIFIERS

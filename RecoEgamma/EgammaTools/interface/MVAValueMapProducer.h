@@ -77,6 +77,7 @@ MVAValueMapProducer<ParticleType>::MVAValueMapProducer(const edm::ParameterSet& 
   const auto& all_mvas = mva_cache->allMVAs();
   for( auto mvaItr = all_mvas.begin(); mvaItr != all_mvas.end(); ++mvaItr ) {
     // set the consumes
+    std::cout<<"construct "<<mvaItr->first<<std::endl;
     mvaItr->second->setConsumes(consumesCollector());
     //
     // Compose and save the names of the value maps to be produced
@@ -122,7 +123,6 @@ void MVAValueMapProducer<ParticleType>::produce(edm::Event& iEvent, const edm::E
 	<< " failed to find a standard AOD or miniAOD particle collection " << std::endl;
   }
 
- 
   // Loop over MVA estimators
   const auto& all_mvas = globalCache()->allMVAs();
   for( auto mva_itr = all_mvas.begin(); mva_itr != all_mvas.end(); ++mva_itr ){    
@@ -150,7 +150,7 @@ void MVAValueMapProducer<ParticleType>::produce(edm::Event& iEvent, const edm::E
     writeValueMap(iEvent, src, mvaRawValues, mvaRawValueMapNames_[iEstimator] );
     writeValueMap(iEvent, src, mvaCategories, mvaCategoriesMapNames_[iEstimator] );
   } // end loop over estimators
-  
+
 
 }
 
