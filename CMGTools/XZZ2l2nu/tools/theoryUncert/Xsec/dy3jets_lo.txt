@@ -1,0 +1,159 @@
+ ################################################################### 
+ # WARNING: this module is deprecated.                             # 
+ # Please use CondCore.CondDB.CondDB_cfi.py                        # 
+ ################################################################### 
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+30-Jan-2017 13:26:48 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/040BEC7C-65C6-E611-9440-FA163E6BD4A4.root
+30-Jan-2017 13:26:51 CET  Successfully opened file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/040BEC7C-65C6-E611-9440-FA163E6BD4A4.root
+Begin processing the 1st record. Run 1, Event 1126988, LumiSection 332 at 30-Jan-2017 13:26:52.722 CET
+Begin processing the 10001st record. Run 1, Event 93195180, LumiSection 27407 at 30-Jan-2017 13:26:53.094 CET
+Begin processing the 20001st record. Run 1, Event 97223157, LumiSection 28591 at 30-Jan-2017 13:26:53.457 CET
+Begin processing the 30001st record. Run 1, Event 69874348, LumiSection 20549 at 30-Jan-2017 13:26:53.828 CET
+Begin processing the 40001st record. Run 1, Event 37210350, LumiSection 10943 at 30-Jan-2017 13:26:54.231 CET
+Begin processing the 50001st record. Run 1, Event 81749365, LumiSection 24041 at 30-Jan-2017 13:26:54.641 CET
+30-Jan-2017 13:26:54 CET  Closed file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/040BEC7C-65C6-E611-9440-FA163E6BD4A4.root
+30-Jan-2017 13:26:54 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/1CEE8BAB-41C6-E611-A5D0-FA163E6B2144.root
+30-Jan-2017 13:26:57 CET  Successfully opened file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/1CEE8BAB-41C6-E611-A5D0-FA163E6B2144.root
+Begin processing the 60001st record. Run 1, Event 11976260, LumiSection 3522 at 30-Jan-2017 13:26:59.803 CET
+Begin processing the 70001st record. Run 1, Event 68766107, LumiSection 20223 at 30-Jan-2017 13:27:00.160 CET
+Begin processing the 80001st record. Run 1, Event 68116904, LumiSection 20032 at 30-Jan-2017 13:27:00.540 CET
+Begin processing the 90001st record. Run 1, Event 27254474, LumiSection 8015 at 30-Jan-2017 13:27:01.030 CET
+Begin processing the 100001st record. Run 1, Event 36920540, LumiSection 10858 at 30-Jan-2017 13:27:01.828 CET
+Begin processing the 110001st record. Run 1, Event 90536706, LumiSection 26625 at 30-Jan-2017 13:27:02.253 CET
+Begin processing the 120001st record. Run 1, Event 81371606, LumiSection 23930 at 30-Jan-2017 13:27:02.613 CET
+Begin processing the 130001st record. Run 1, Event 99739497, LumiSection 29331 at 30-Jan-2017 13:27:02.972 CET
+30-Jan-2017 13:27:02 CET  Closed file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/1CEE8BAB-41C6-E611-A5D0-FA163E6B2144.root
+30-Jan-2017 13:27:02 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/1EEFA08F-C1C7-E611-8857-02163E019B2B.root
+30-Jan-2017 13:27:05 CET  Successfully opened file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/1EEFA08F-C1C7-E611-8857-02163E019B2B.root
+Begin processing the 140001st record. Run 1, Event 93798645, LumiSection 27584 at 30-Jan-2017 13:27:05.968 CET
+30-Jan-2017 13:27:06 CET  Closed file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/1EEFA08F-C1C7-E611-8857-02163E019B2B.root
+30-Jan-2017 13:27:06 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/3618D2AC-22C8-E611-8980-F45214939740.root
+30-Jan-2017 13:27:08 CET  Successfully opened file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/3618D2AC-22C8-E611-8980-F45214939740.root
+30-Jan-2017 13:27:08 CET  Closed file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/3618D2AC-22C8-E611-8980-F45214939740.root
+30-Jan-2017 13:27:08 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/36919E59-31C7-E611-A946-00266CF91A18.root
+30-Jan-2017 13:27:10 CET  Successfully opened file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/36919E59-31C7-E611-A946-00266CF91A18.root
+Begin processing the 150001st record. Run 1, Event 47616336, LumiSection 14004 at 30-Jan-2017 13:27:11.351 CET
+30-Jan-2017 13:27:11 CET  Closed file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/36919E59-31C7-E611-A946-00266CF91A18.root
+30-Jan-2017 13:27:11 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/38881F94-E5C7-E611-A331-FA163E87336B.root
+30-Jan-2017 13:27:13 CET  Successfully opened file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/38881F94-E5C7-E611-A331-FA163E87336B.root
+Begin processing the 160001st record. Run 1, Event 62566059, LumiSection 18400 at 30-Jan-2017 13:27:14.227 CET
+30-Jan-2017 13:27:14 CET  Closed file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/38881F94-E5C7-E611-A331-FA163E87336B.root
+30-Jan-2017 13:27:14 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/3E18AC6A-24C7-E611-8E47-008CFA197D10.root
+30-Jan-2017 13:27:16 CET  Successfully opened file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/3E18AC6A-24C7-E611-8E47-008CFA197D10.root
+Begin processing the 170001st record. Run 1, Event 38158640, LumiSection 11222 at 30-Jan-2017 13:27:17.307 CET
+Begin processing the 180001st record. Run 1, Event 76375420, LumiSection 22461 at 30-Jan-2017 13:27:17.687 CET
+30-Jan-2017 13:27:18 CET  Closed file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/3E18AC6A-24C7-E611-8E47-008CFA197D10.root
+30-Jan-2017 13:27:18 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/4855BE3E-57C6-E611-BA44-A0369F7FCA68.root
+30-Jan-2017 13:27:20 CET  Successfully opened file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/4855BE3E-57C6-E611-BA44-A0369F7FCA68.root
+Begin processing the 190001st record. Run 1, Event 35614286, LumiSection 10474 at 30-Jan-2017 13:27:20.816 CET
+Begin processing the 200001st record. Run 1, Event 65365937, LumiSection 19223 at 30-Jan-2017 13:27:21.174 CET
+Begin processing the 210001st record. Run 1, Event 84506142, LumiSection 24851 at 30-Jan-2017 13:27:21.527 CET
+Begin processing the 220001st record. Run 1, Event 79109716, LumiSection 23265 at 30-Jan-2017 13:27:21.883 CET
+Begin processing the 230001st record. Run 1, Event 81264056, LumiSection 23898 at 30-Jan-2017 13:27:22.268 CET
+Begin processing the 240001st record. Run 1, Event 77123930, LumiSection 22681 at 30-Jan-2017 13:27:22.624 CET
+Begin processing the 250001st record. Run 1, Event 85877984, LumiSection 25255 at 30-Jan-2017 13:27:22.979 CET
+30-Jan-2017 13:27:23 CET  Closed file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/4855BE3E-57C6-E611-BA44-A0369F7FCA68.root
+30-Jan-2017 13:27:23 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/4A435FA1-2BC7-E611-8969-FA163E5E22D1.root
+30-Jan-2017 13:27:25 CET  Successfully opened file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/4A435FA1-2BC7-E611-8969-FA163E5E22D1.root
+Begin processing the 260001st record. Run 1, Event 36240078, LumiSection 10657 at 30-Jan-2017 13:27:27.390 CET
+30-Jan-2017 13:27:27 CET  Closed file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/4A435FA1-2BC7-E611-8969-FA163E5E22D1.root
+30-Jan-2017 13:27:27 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/4AFE0656-F8C9-E611-8A9F-848F69FD2940.root
+30-Jan-2017 13:27:29 CET  Successfully opened file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/4AFE0656-F8C9-E611-8A9F-848F69FD2940.root
+Begin processing the 270001st record. Run 1, Event 77652366, LumiSection 22836 at 30-Jan-2017 13:27:30.319 CET
+30-Jan-2017 13:27:30 CET  Closed file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/4AFE0656-F8C9-E611-8A9F-848F69FD2940.root
+30-Jan-2017 13:27:30 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/4E10D746-ECC7-E611-AD47-001F290860E4.root
+30-Jan-2017 13:27:32 CET  Successfully opened file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/4E10D746-ECC7-E611-AD47-001F290860E4.root
+30-Jan-2017 13:27:33 CET  Closed file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/4E10D746-ECC7-E611-AD47-001F290860E4.root
+30-Jan-2017 13:27:33 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/60BE293A-CDC7-E611-80F5-485B39897264.root
+30-Jan-2017 13:27:35 CET  Successfully opened file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/60BE293A-CDC7-E611-80F5-485B39897264.root
+30-Jan-2017 13:27:35 CET  Closed file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/60BE293A-CDC7-E611-80F5-485B39897264.root
+30-Jan-2017 13:27:35 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/6E577AAE-58C6-E611-9B20-FA163E5F0024.root
+30-Jan-2017 13:27:37 CET  Successfully opened file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/6E577AAE-58C6-E611-9B20-FA163E5F0024.root
+Begin processing the 280001st record. Run 1, Event 81349317, LumiSection 23924 at 30-Jan-2017 13:27:39.076 CET
+Begin processing the 290001st record. Run 1, Event 37717353, LumiSection 11092 at 30-Jan-2017 13:27:39.431 CET
+Begin processing the 300001st record. Run 1, Event 58930519, LumiSection 17331 at 30-Jan-2017 13:27:39.794 CET
+Begin processing the 310001st record. Run 1, Event 78228274, LumiSection 23005 at 30-Jan-2017 13:27:40.154 CET
+Begin processing the 320001st record. Run 1, Event 70279891, LumiSection 20668 at 30-Jan-2017 13:27:40.550 CET
+Begin processing the 330001st record. Run 1, Event 92638944, LumiSection 27243 at 30-Jan-2017 13:27:40.914 CET
+30-Jan-2017 13:27:41 CET  Closed file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/6E577AAE-58C6-E611-9B20-FA163E5F0024.root
+30-Jan-2017 13:27:41 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/8086C724-D6C6-E611-AE8A-002590A88810.root
+30-Jan-2017 13:27:43 CET  Successfully opened file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/8086C724-D6C6-E611-AE8A-002590A88810.root
+Begin processing the 340001st record. Run 1, Event 10958828, LumiSection 3223 at 30-Jan-2017 13:27:43.944 CET
+Begin processing the 350001st record. Run 1, Event 90265793, LumiSection 26546 at 30-Jan-2017 13:27:44.299 CET
+Begin processing the 360001st record. Run 1, Event 37207117, LumiSection 10942 at 30-Jan-2017 13:27:44.653 CET
+Begin processing the 370001st record. Run 1, Event 92617947, LumiSection 27237 at 30-Jan-2017 13:27:45.010 CET
+30-Jan-2017 13:27:45 CET  Closed file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/8086C724-D6C6-E611-AE8A-002590A88810.root
+30-Jan-2017 13:27:45 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/9647E910-FEC8-E611-9B90-00259074AE80.root
+30-Jan-2017 13:27:47 CET  Successfully opened file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/9647E910-FEC8-E611-9B90-00259074AE80.root
+Begin processing the 380001st record. Run 1, Event 97905629, LumiSection 28792 at 30-Jan-2017 13:27:47.849 CET
+30-Jan-2017 13:27:47 CET  Closed file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/9647E910-FEC8-E611-9B90-00259074AE80.root
+30-Jan-2017 13:27:47 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/A424BE7F-1CC7-E611-888E-484D7E8DF09F.root
+30-Jan-2017 13:27:49 CET  Successfully opened file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/A424BE7F-1CC7-E611-888E-484D7E8DF09F.root
+Begin processing the 390001st record. Run 1, Event 77038123, LumiSection 22656 at 30-Jan-2017 13:27:50.898 CET
+30-Jan-2017 13:27:51 CET  Closed file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/A424BE7F-1CC7-E611-888E-484D7E8DF09F.root
+30-Jan-2017 13:27:51 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/C673D5DF-4DC6-E611-BBB0-008CFA1660F8.root
+30-Jan-2017 13:27:53 CET  Successfully opened file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/C673D5DF-4DC6-E611-BBB0-008CFA1660F8.root
+Begin processing the 400001st record. Run 1, Event 76989844, LumiSection 22641 at 30-Jan-2017 13:27:54.054 CET
+Begin processing the 410001st record. Run 1, Event 11092010, LumiSection 3262 at 30-Jan-2017 13:27:54.408 CET
+Begin processing the 420001st record. Run 1, Event 33486718, LumiSection 9848 at 30-Jan-2017 13:27:54.759 CET
+Begin processing the 430001st record. Run 1, Event 50314603, LumiSection 14796 at 30-Jan-2017 13:27:55.120 CET
+Begin processing the 440001st record. Run 1, Event 35536060, LumiSection 10451 at 30-Jan-2017 13:27:55.526 CET
+Begin processing the 450001st record. Run 1, Event 35582063, LumiSection 10464 at 30-Jan-2017 13:27:55.879 CET
+Begin processing the 460001st record. Run 1, Event 92888979, LumiSection 27317 at 30-Jan-2017 13:27:56.237 CET
+30-Jan-2017 13:27:56 CET  Closed file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/C673D5DF-4DC6-E611-BBB0-008CFA1660F8.root
+30-Jan-2017 13:27:56 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/EC497FA6-D9C8-E611-A9BD-001E67E71DDA.root
+30-Jan-2017 13:27:58 CET  Successfully opened file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/EC497FA6-D9C8-E611-A9BD-001E67E71DDA.root
+30-Jan-2017 13:27:59 CET  Closed file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/EC497FA6-D9C8-E611-A9BD-001E67E71DDA.root
+30-Jan-2017 13:27:59 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/F0224612-45C6-E611-B55C-FA163ED3255D.root
+30-Jan-2017 13:28:01 CET  Successfully opened file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/F0224612-45C6-E611-B55C-FA163ED3255D.root
+Begin processing the 470001st record. Run 1, Event 79821913, LumiSection 23474 at 30-Jan-2017 13:28:02.240 CET
+Begin processing the 480001st record. Run 1, Event 47702108, LumiSection 14028 at 30-Jan-2017 13:28:02.589 CET
+Begin processing the 490001st record. Run 1, Event 68083019, LumiSection 20022 at 30-Jan-2017 13:28:02.948 CET
+Begin processing the 500001st record. Run 1, Event 74156519, LumiSection 21808 at 30-Jan-2017 13:28:03.298 CET
+Begin processing the 510001st record. Run 1, Event 97883785, LumiSection 28786 at 30-Jan-2017 13:28:03.697 CET
+Begin processing the 520001st record. Run 1, Event 91231247, LumiSection 26830 at 30-Jan-2017 13:28:04.050 CET
+30-Jan-2017 13:28:04 CET  Closed file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/120000/F0224612-45C6-E611-B55C-FA163ED3255D.root
+30-Jan-2017 13:28:04 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/50000/382A312B-B4C7-E611-A9FE-FA163EF6A110.root
+30-Jan-2017 13:28:06 CET  Successfully opened file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/50000/382A312B-B4C7-E611-A9FE-FA163EF6A110.root
+Begin processing the 530001st record. Run 1, Event 73428637, LumiSection 21594 at 30-Jan-2017 13:28:07.053 CET
+   1726.550377      0.019910      0.027447             0
+ 
+30-Jan-2017 13:28:07 CET  Closed file root://eoscms.cern.ch//eos/cms/store/mc/RunIISummer16MiniAODv2/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/MINIAODSIM/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/50000/382A312B-B4C7-E611-A9FE-FA163EF6A110.root
+
+------------------------------------
+GenXsecAnalyzer:
+------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+Overall cross-section summary 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Process		xsec_before [pb]		passed	nposw	nnegw	tried	nposw	nnegw 	xsec_match [pb]			accepted [%]	 event_eff [%]
+0		1.726e+03 +/- 4.897e-02		532191	532191	0	8973990	8973990	0	1.024e+02 +/- 1.362e-01		5.9 +/- 0.0	5.9 +/- 0.0
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+Total		1.726e+03 +/- 4.897e-02		532191	532191	0	8973990	8973990	0	1.024e+02 +/- 1.362e-01		5.9 +/- 0.0	5.9 +/- 0.0
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Before matching: total cross section = 1.726e+03 +- 4.897e-02 pb
+After matching: total cross section = 1.024e+02 +- 1.362e-01 pb
+Filter efficiency (taking into account weights)= (532191) / (532191) = 1.000e+00 +- 0.000e+00
+Filter efficiency (event-level)= (532191) / (532191) = 1.000e+00 +- 0.000e+00
+After filter: final cross section = 1.024e+02 +- 1.362e-01 pb
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 GenXSecAnalyzer      -w GenXSecAnalyzer:                      12       12
+    2 fileAction           -s file_close                            20       20
+    3 fileAction           -s file_open                             40       40
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 GenXSecAnalyzer      PostEndRun       PostEndRun       PostEndRun
+    2 fileAction           PostProcessEvent PostProcessEvent PostEndRun
+    3 fileAction           pre-events       pre-events       PostProcessEvent
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Warning                12                  12
+System                 60                  60

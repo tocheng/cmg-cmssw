@@ -1,0 +1,22 @@
+#! /usr/bin/env python
+
+from ROOT import *
+import sys
+execfile(sys.argv[1])
+f=TFile(infile)
+dh=f.Get(datahist)
+dhc=dh.GetBinContent(1)
+dhe=dh.GetBinError(1)**2
+for i in mchist:
+    mh=f.Get(i)
+    dhc-=mh.GetBinContent(1)
+    dhe+=mh.GetBinError(1)**2
+nh=f.Get(nonreshist)
+nhc=nh.GetBinContent(1)
+nhe=nh.GetBinError(1)**2
+sc=dhc/nhc
+sce=(dhe/(dhc**2)+nhe/(nhc**2))**0.5*dhc/nhc
+print '{0}+-{1}'.format(sc,sce)
+
+
+

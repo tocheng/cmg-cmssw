@@ -1,0 +1,29 @@
+
+Processing nvtxratio_b2h33fbinv.C...
+Using customized style
+ FCN=464.37 FROM MIGRAD    STATUS=CONVERGED     103 CALLS         104 TOTAL
+                     EDM=6.06085e-13    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           8.06788e-01   8.67945e-03   9.09343e-06   7.68191e-04
+   2  p1           6.50366e-03   1.26031e-03   5.66932e-07   8.67242e-03
+   3  p2          -3.68923e-05   4.56927e-05   3.04387e-08   8.17391e-02
+   4  p3           6.73006e-04   1.01670e-05   4.44043e-08  -1.10277e-01
+   5  p4           2.50000e-01     fixed    
+Formula based function:     f_nVert_ratio_dt_mc 
+  f_nVert_ratio_dt_mc : [0]+[1]*x+[2]*x*x+[3]*exp([4]*x) Ndim= 1, Npar= 5, Number= 0 
+ Formula expression: 
+	[p0]+[p1]*x+[p2]*x*x+[p3]*exp([p4]*x) 
+List of  Variables: 
+Var   0                    x =    0.000000 
+List of  Parameters: 
+Par   0                   p0 =    0.806788 
+Par   1                   p1 =    0.006504 
+Par   2                   p2 =   -0.000037 
+Par   3                   p3 =    0.000673 
+Par   4                   p4 =    0.250000 
+Expression passed to Cling:
+	Double_t TFormula____id13541124167022650052(Double_t *x,Double_t *p){ return p[0]+p[1]*x[0]+p[2]*x[0]*x[0]+p[3]*TMath::Exp(p[4]*x[0]) ; }
+#############################################
+func = (0.807+0.007*nVert+-3.689e-05*nVert*nVert+6.730e-04*exp(2.500e-01*nVert))
+#############################################

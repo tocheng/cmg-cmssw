@@ -1,0 +1,27 @@
+
+Processing rhoratio_b2h33fbinv.C...
+Using customized style
+ FCN=384.671 FROM MIGRAD    STATUS=CONVERGED     111 CALLS         112 TOTAL
+                     EDM=2.07586e-17    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           1.89897e-02   4.63404e-03   7.15471e-06   3.97245e-08
+   2  p1           1.14119e-01   1.46975e-03   7.17883e-07  -1.78159e-06
+   3  p2          -4.70461e-03   1.36872e-04   5.20212e-08   2.45857e-05
+   4  p3           1.49060e-04   3.79173e-06   3.07844e-09  -9.23251e-05
+Formula based function:     f_rho_ratio_dt_mc 
+    f_rho_ratio_dt_mc : [0]+[1]*x+[2]*x*x+[3]*x*x*x Ndim= 1, Npar= 4, Number= 0 
+ Formula expression: 
+	[p0]+[p1]*x+[p2]*x*x+[p3]*x*x*x 
+List of  Variables: 
+Var   0                    x =    0.000000 
+List of  Parameters: 
+Par   0                   p0 =    0.018990 
+Par   1                   p1 =    0.114119 
+Par   2                   p2 =   -0.004705 
+Par   3                   p3 =    0.000149 
+Expression passed to Cling:
+	Double_t TFormula____id15701886775453868885(Double_t *x,Double_t *p){ return p[0]+p[1]*x[0]+p[2]*x[0]*x[0]+p[3]*x[0]*x[0]*x[0] ; }
+#############################################
+func = (0.019+0.114*rho+-4.705e-03*rho*rho+1.491e-04*rho*rho*rho)
+#############################################

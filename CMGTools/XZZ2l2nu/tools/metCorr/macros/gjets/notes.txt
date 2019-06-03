@@ -1,0 +1,213 @@
+
+BCD:
+((ieta!=5||iphi!=41)&&    # bc=357
+(ieta!=-51||iphi!=196)&&    # bc=109
+(ieta!=56||iphi!=67)&&    # bc=91
+(ieta!=-45||iphi!=340)&&    # bc=69
+(ieta!=58||iphi!=74)&&    # bc=66
+(ieta!=79||iphi!=67)&&    # bc=65
+(ieta!=72||iphi!=67)&&    # bc=57
+(ieta!=4||iphi!=70)&&    # bc=55
+(ieta!=17||iphi!=290)&&    # bc=47
+(ieta!=-44||iphi!=133)&&    # bc=42
+(ieta!=13||iphi!=67)&&    # bc=41
+(ieta!=-24||iphi!=119)&&    # bc=31
+(ieta!=-84||iphi!=168)&&    # bc=17
+(ieta!=73||iphi!=299)&&    # bc=14
+(ieta!=49||iphi!=6)&&    # bc=12
+(ieta!=-21||iphi!=308)&&    # bc=11
+(ieta!=59||iphi!=180)&&    # bc=8
+(ieta!=2||iphi!=81)&&    # bc=7
+(ieta!=22||iphi!=138)&&    # bc=7
+(ieta!=1||iphi!=81)&&    # bc=6
+(ieta!=7||iphi!=128)&&    # bc=6
+(ieta!=73||iphi!=143)&&    # bc=6
+(ieta!=-20||iphi!=188)&&    # bc=6
+(ieta!=-19||iphi!=193)&&    # bc=6
+(ieta!=-15||iphi!=194)&&    # bc=6
+(ieta!=-6||iphi!=208)&&    # bc=6
+(ieta!=46||iphi!=208)&&    # bc=6
+(ieta!=-56||iphi!=216)&&    # bc=6
+(ieta!=42||iphi!=224)&&    # bc=6
+(ieta!=-43||iphi!=225)&&    # bc=6
+(ieta!=-20||iphi!=225)&&    # bc=6
+(ieta!=-47||iphi!=226)&&    # bc=6
+(ieta!=-41||iphi!=231)&&    # bc=6
+(ieta!=-62||iphi!=233)&&    # bc=6
+(ieta!=9||iphi!=233)&&    # bc=6
+(ieta!=-18||iphi!=235)&&    # bc=6
+(ieta!=-10||iphi!=238)&&    # bc=6
+(ieta!=8||iphi!=240)&&    # bc=6
+(ieta!=25||iphi!=242)&&    # bc=6
+(ieta!=-34||iphi!=247)&&    # bc=6
+(ieta!=3||iphi!=253)&&    # bc=6
+(ieta!=8||iphi!=267)&&    # bc=6
+(ieta!=65||iphi!=271)&&    # bc=6
+(ieta!=48||iphi!=273)&&    # bc=6
+(ieta!=18||iphi!=285)&&    # bc=6
+(ieta!=-2||iphi!=287)&&    # bc=6
+(ieta!=26||iphi!=313)&&    # bc=6
+(ieta!=17||iphi!=49)&&    # bc=5
+(ieta!=-67||iphi!=81)&&    # bc=5
+(ieta!=-48||iphi!=98)&&    # bc=5
+
+
+2016D noise cell
+(ieta!=5&&iphi!=41)&&    # bc=641
+(ieta!=-24&&iphi!=119)&&    # bc=162
+(ieta!=58&&iphi!=74)&&    # bc=119
+(ieta!=56&&iphi!=67)&&    # bc=116
+(ieta!=-44&&iphi!=133)&&    # bc=115
+(ieta!=-45&&iphi!=340)&&    # bc=109
+(ieta!=-51&&iphi!=196)&&    # bc=108
+(ieta!=17&&iphi!=290)&&    # bc=100
+(ieta!=79&&iphi!=67)&&    # bc=97
+(ieta!=72&&iphi!=67)&&    # bc=87
+(ieta!=49&&iphi!=6)&&    # bc=86
+(ieta!=5&&iphi!=42)&&    # bc=83
+(ieta!=-21&&iphi!=308)&&    # bc=74
+(ieta!=3&&iphi!=109)&&    # bc=73
+(ieta!=12&&iphi!=6)&&    # bc=71
+(ieta!=2&&iphi!=26)&&    # bc=71
+(ieta!=-14&&iphi!=148)&&    # bc=71
+(ieta!=3&&iphi!=246)&&    # bc=71
+(ieta!=-4&&iphi!=113)&&    # bc=70
+(ieta!=-5&&iphi!=277)&&    # bc=70
+(ieta!=4&&iphi!=87)&&    # bc=69
+(ieta!=-5&&iphi!=56)&&    # bc=68
+(ieta!=-48&&iphi!=98)&&    # bc=68
+(ieta!=-40&&iphi!=164)&&    # bc=68
+(ieta!=4&&iphi!=13)&&    # bc=67
+(ieta!=3&&iphi!=63)&&    # bc=67
+(ieta!=5&&iphi!=180)&&    # bc=67
+(ieta!=59&&iphi!=180)&&    # bc=67
+(ieta!=-42&&iphi!=224)&&    # bc=67
+(ieta!=-11&&iphi!=252)&&    # bc=67
+(ieta!=4&&iphi!=283)&&    # bc=67
+(ieta!=-3&&iphi!=325)&&    # bc=67
+(ieta!=41&&iphi!=46)&&    # bc=66
+(ieta!=-5&&iphi!=239)&&    # bc=66
+(ieta!=-13&&iphi!=298)&&    # bc=66
+(ieta!=4&&iphi!=14)&&    # bc=65
+(ieta!=8&&iphi!=98)&&    # bc=65
+(ieta!=-24&&iphi!=142)&&    # bc=65
+(ieta!=18&&iphi!=223)&&    # bc=65
+(ieta!=3&&iphi!=227)&&    # bc=65
+(ieta!=8&&iphi!=2)&&    # bc=64
+(ieta!=4&&iphi!=30)&&    # bc=64
+(ieta!=-53&&iphi!=85)&&    # bc=64
+(ieta!=1&&iphi!=93)&&    # bc=64
+(ieta!=-4&&iphi!=115)&&    # bc=64
+(ieta!=-44&&iphi!=149)&&    # bc=64
+(ieta!=11&&iphi!=157)&&    # bc=64
+(ieta!=-5&&iphi!=170)&&    # bc=64
+(ieta!=-5&&iphi!=183)&&    # bc=64
+(ieta!=6&&iphi!=254)&&    # bc=64
+
+tree->SetAlias("flag6", "((ieta!=5||iphi!=41)&&(ieta!=-24||iphi!=119)&&(ieta!=58||iphi!=74)&&(ieta!=56||iphi!=67)&&(ieta!=-44||iphi!=133)&&(ieta!=-45||iphi!=340)&&(ieta!=-51||iphi!=196)&&(ieta!=17||iphi!=290)&&(ieta!=79||iphi!=67)&&(ieta!=72||iphi!=67)&&(ieta!=49||iphi!=6)&&(ieta!=5||iphi!=42)&&(ieta!=-21||iphi!=308)&&(ieta!=3||iphi!=109)&&(ieta!=12||iphi!=6)&&(ieta!=2||iphi!=26)&&(ieta!=-14||iphi!=148)&&(ieta!=3||iphi!=246)&&(ieta!=-4||iphi!=113)&&(ieta!=-5||iphi!=277)&&(ieta!=4||iphi!=87)&&(ieta!=-5||iphi!=56)&&(ieta!=-48||iphi!=98))");
+
+
+gjet_l1_iphi:gjet_l1_ieta>>h077(181,-90.5,90.5,360,0.5,360.5)
+
+tree->Draw("gjet_l1_iphi:gjet_l1_ieta>>h077", "HLT_PHOTONIDISO&&metfilter&&fabs(eta)<1.47&&ngjet==1&&ut<100&&metPara<-100&&pt>100", "colz")
+
+Int_t cx; Int_t cy; Int_t bc;
+Int_t bx; Int_t by; Int_t bz;
+std::cout << "(";
+for (int i=0;i<50; i++) { 
+  h077->GetMaximumBin(bx,by,bz); 
+  cx = (Int_t)h077->GetXaxis()->GetBinCenter(bx); 
+  cy = (Int_t)h077->GetYaxis()->GetBinCenter(by);  
+  bc = (Int_t)h077->GetBinContent(bx,by); 
+  std::cout << "(ieta!=" << cx << "||iphi!=" << cy << ")&&"; 
+  std::cout  << "    # bc="<<bc << std::endl; 
+  h077->SetBinContent(bx,by,0); 
+}; std::cout << ")" << std::endl;
+
+
+
+tree->Draw("phi:eta>>h025(60,-3,3,80,-4,4)", "ngjet==1&&fabs(eta)<1.4&&gjet_l1_sigmaIetaIeta<0.00005", "colz")
+tree->Draw("pt:metPara>>h018(1000,-1000,1000,1000,0,1000)", "ngjet==1&&fabs(eta)<1.4&&gjet_l1_sigmaIetaIeta<0.0005", "colz")
+
+
+
+tree->SetAlias("flag2", "(!(eta>0&&eta<0.15&&phi>0.52&&phi<0.56)&&!(eta>-2.5&&eta<-1.4&&phi>-0.5&&phi<0.5)&&!(eta>1.5&&eta<2.5&&phi>-0.5&&phi<0.5)&&!(eta>1.4&&eta<1.6&&phi>-0.8&&phi<-0.5)&&!(eta>1.4&&eta<2.5&&phi>2.5&&phi<4)&&!(eta>1.4&&eta<2.5&&phi>-4&&phi<-2.5)&&!(eta>-2.5&&eta<-1.4&&phi>2.5&&phi<4)&&!(eta>-2.5&&eta<-1.4&&phi>-4&&phi<-2.5)&&!(eta>2.3&&eta<2.6&&phi>-2.5&&phi<-2.2)&&!(eta>0.2&&eta<0.3&&phi>-2.6&&phi<-2.5)&&!(eta>0.5&&eta<0.7&&phi>-1.5&&phi<-1.2)&&!(eta>-0.85&&eta<-0.7&&phi>-1.8&&phi<-1.4)&&!(eta<-2.4&&eta>-2.5&&phi<-1.75&&phi>-1.9)&&!(eta>-2.5&&eta<-2.4&&phi>-1.2&&phi<-1.1)&&!(eta>-2.4&&eta<-2.3&&phi>-2.4&&phi<-2.3))")
+
+(
+(pt>=60&&
+!(eta>-2.5&&eta<-1.4&&phi>2.4&&phi<3.2)&&
+!(eta>-2.5&&eta<-1.4&&phi>-0.9&&phi<0.9)&&
+!(eta>-2.5&&eta<-1.4&&phi>-3.2&&phi<-2.4)&&
+!(eta>1.4&&eta<2.5&&phi>2.4&&phi<3.2)&&
+!(eta>1.4&&eta<2.5&&phi>-0.9&&phi<0.9)&&
+!(eta>1.4&&eta<2.5&&phi>-3.2&&phi<-2.0)&&
+
+!(eta>-2.1&&eta<-1.8&&phi>1.2&&phi<1.6)&&
+!(eta>-2.0&&eta<-1.6&&phi>-2.1&&phi<-1.8)&&
+
+!(eta>-0.3&&eta<0.0&&phi>2.5&&phi<3.0)&&
+!(eta>0.0&&eta<0.3&&phi>2.8&&phi<3.2)&&
+!(eta>-0.2&&eta<0.3&&phi>0.2&&phi<0.8)&&
+!(eta>-0.5&&eta<-0.2&&phi>-2.4&&phi<2.0)&&
+
+!(eta>2.3&&eta<2.5&&phi>-1.5&&phi<-1.0)&&
+
+
+)||
+(pt<60&&
+!(eta>-2.5&&eta<-2.2&&phi>-3.0&&phi<-2.6)&&
+!(eta>0&&eta<0.3&&phi>-2.4&&phi<-1.4)&&
+!(eta>-0.2&&eta<0.2&&phi>-3.2&&phi<-2.6)&&
+!(eta>2.3&&eta<2.5&&phi>-2.6&&phi<-2.0)&&
+
+)
+)
+
+  tree->SetAlias("absDeltaPhi", "fabs(TVector2::Phi_mpi_pi(gjet_l2_phi-gjet_l1_phi))");
+  tree->SetAlias("metPara", "gjet_l2_pt*cos(gjet_l2_phi-gjet_l1_phi)");
+  tree->SetAlias("metPerp", "gjet_l2_pt*sin(gjet_l2_phi-gjet_l1_phi)");
+  tree->SetAlias("uPara", "-gjet_l2_pt*cos(gjet_l2_phi-gjet_l1_phi)-gjet_l1_pt");
+  tree->SetAlias("uPerp", "-gjet_l2_pt*sin(gjet_l2_phi-gjet_l1_phi)");
+  tree->SetAlias("ut", "sqrt(uPara*uPara+uPerp*uPerp)");
+  tree->SetAlias("eta", "gjet_l1_eta");
+  tree->SetAlias("phi", "gjet_l1_phi");
+    tree->SetAlias("pt", "gjet_l1_pt");
+
+
+  tree->SetAlias("absDeltaPhi", "fabs(TVector2::Phi_mpi_pi(llnunu_l2_phi-llnunu_l1_phi))");
+  tree->SetAlias("metPara", "llnunu_l2_pt*cos(llnunu_l2_phi-llnunu_l1_phi)");
+  tree->SetAlias("metPerp", "llnunu_l2_pt*sin(llnunu_l2_phi-llnunu_l1_phi)");
+  tree->SetAlias("eta", "llnunu_l1_eta");
+  tree->SetAlias("phi", "llnunu_l1_phi");
+  tree->SetAlias("flag2", "(!(eta>0&&eta<0.15&&phi>0.52&&phi<0.56)&&!(eta>-2.5&&eta<-1.4&&phi>-0.5&&phi<0.5)&&!(eta>1.5&&eta<2.5&&phi>-0.5&&phi<0.5)&&!(eta>1.4&&eta<1.6&&phi>-0.8&&phi<-0.5)&&!(eta>1.4&&eta<2.5&&phi>2.5&&phi<4)&&!(eta>1.4&&eta<2.5&&phi>-4&&phi<-2.5)&&!(eta>-2.5&&eta<-1.4&&phi>2.5&&phi<4)&&!(eta>-2.5&&eta<-1.4&&phi>-4&&phi<-2.5)&&!(eta>2.3&&eta<2.6&&phi>-2.5&&phi<-2.2)&&!(eta>0.2&&eta<0.3&&phi>-2.6&&phi<-2.5)&&!(eta>0.5&&eta<0.7&&phi>-1.5&&phi<-1.2)&&!(eta>-0.85&&eta<-0.7&&phi>-1.8&&phi<-1.4)&&!(eta<-2.4&&eta>-2.5&&phi<-1.75&&phi>-1.9)&&!(eta>-2.5&&eta<-2.4&&phi>-1.2&&phi<-1.1)&&!(eta>-2.4&&eta<-2.3&&phi>-2.4&&phi<-2.3))");
+
+
+flag3:
+(
+tree->SetAlias("flag3", "((pt>=60&&!(eta>-2.5&&eta<-1.4&&phi>2.4&&phi<3.2)&&!(eta>-2.5&&eta<-1.4&&phi>-0.9&&phi<0.9)&&!(eta>-2.5&&eta<-1.4&&phi>-3.2&&phi<-2.4)&&!(eta>1.4&&eta<2.5&&phi>2.4&&phi<3.2)&&!(eta>1.4&&eta<2.5&&phi>-0.9&&phi<0.9)&&!(eta>1.4&&eta<2.5&&phi>-3.2&&phi<-2.0)&&!(eta>-2.1&&eta<-1.8&&phi>1.2&&phi<1.6)&&!(eta>-2.0&&eta<-1.6&&phi>-2.1&&phi<-1.8)&&!(eta>-0.3&&eta<0.0&&phi>2.5&&phi<3.0)&&!(eta>0.0&&eta<0.3&&phi>2.8&&phi<3.2)&&!(eta>-0.2&&eta<0.3&&phi>0.2&&phi<0.8)&&!(eta>-0.5&&eta<-0.2&&phi>-2.4&&phi<2.0)&&!(eta>2.3&&eta<2.5&&phi>-1.5&&phi<-1.0))||(pt<60&&!(eta>-2.5&&eta<-2.2&&phi>-3.0&&phi<-2.6)&&!(eta>0&&eta<0.3&&phi>-2.4&&phi<-1.4)&&!(eta>-0.2&&eta<0.2&&phi>-3.2&&phi<-2.6)&&!(eta>2.3&&eta<2.5&&phi>-2.6&&phi<-2.0)))");
+
+
+flag4:
+(!(eta>-2.4&&eta<-2.2&&phi>-3.4&&phi<-3.2)&&!(eta>-2.2&&eta<-2&&phi>-3.2&&phi<-3)&&!(eta>-2.2&&eta<-2&&phi>-3.2&&phi<-3)&&!(eta>-2&&eta<-1.8&&phi>-3&&phi<-2.8)&&!(eta>-2&&eta<-1.8&&phi>-3&&phi<-2.8)&&!(eta>-2&&eta<-1.8&&phi>-3&&phi<-2.8)&&!(eta>-2&&eta<-1.8&&phi>-3&&phi<-2.8)&&!(eta>-1.8&&eta<-1.6&&phi>-2.8&&phi<-2.6)&&!(eta>-1.8&&eta<-1.6&&phi>-2.8&&phi<-2.6)&&!(eta>-1.8&&eta<-1.6&&phi>-2.8&&phi<-2.6)&&!(eta>-1.4&&eta<-1.2&&phi>-2.4&&phi<-2.2)&&!(eta>-0.2&&eta<0&&phi>-1.2&&phi<-1)&&!(eta>1.6&&eta<1.8&&phi>0.6&&phi<0.8)&&!(eta>1.6&&eta<1.8&&phi>0.6&&phi<0.8)&&!(eta>1.6&&eta<1.8&&phi>0.6&&phi<0.8)&&!(eta>1.6&&eta<1.8&&phi>0.6&&phi<0.8)&&!(eta>1.8&&eta<2&&phi>0.8&&phi<1)&&!(eta>1.8&&eta<2&&phi>0.8&&phi<1)&&!(eta>1.8&&eta<2&&phi>0.8&&phi<1)&&!(eta>1.8&&eta<2&&phi>0.8&&phi<1)&&!(eta>1.8&&eta<2&&phi>0.8&&phi<1)&&!(eta>1.8&&eta<2&&phi>0.8&&phi<1)&&!(eta>1.8&&eta<2&&phi>0.8&&phi<1)&&(1))
+
+!(eta>&&eta<&&phi>&&phi<)
+
+(
+!(eta>-2.5&&eta<-1.4&&phi>-1&&phi<1)&&
+!(eta>1.5&&eta<2.5&&phi>-1&&phi<1)&&
+
+!(eta>1.4&&eta<2.5&&phi>2.5&&phi<4)&&
+!(eta>1.4&&eta<2.5&&phi>-4&&phi<-2.5)&&
+!(eta>-2.5&&eta<-1.4&&phi>2.5&&phi<4)&&
+!(eta>-2.5&&eta<-1.4&&phi>-4&&phi<-2.5)&&
+
+!(eta>0&&eta<0.15&&phi>0.52&&phi<0.56)&&
+!(eta>1.4&&eta<1.6&&phi>-0.8&&phi<-0.5)&&
+!(eta>2.3&&eta<2.6&&phi>-2.5&&phi<-2.2)&&
+!(eta>0.2&&eta<0.3&&phi>-2.6&&phi<-2.5)&&
+!(eta>0.5&&eta<0.7&&phi>-1.5&&phi<-1.2)&&
+!(eta>-0.85&&eta<-0.7&&phi>-1.8&&phi<-1.4)&&
+!(eta<-2.4&&eta>-2.5&&phi<-1.75&&phi>-1.9)&&
+!(eta>-2.5&&eta<-2.4&&phi>-1.2&&phi<-1.1)&&
+!(eta>-2.4&&eta<-2.3&&phi>-2.4&&phi<-2.3)
+)

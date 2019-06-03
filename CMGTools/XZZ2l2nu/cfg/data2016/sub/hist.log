@@ -1,0 +1,1000 @@
+  154  top
+  155  scram b -j10
+  156  vim 1001.1.log 
+  157  ls
+  158  cd 1001.1_RunHLTPhy2017F+RunHLTPhy2017F+TIER0EXP+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  159  ls
+  160  vim step2_RunHLTPhy2017F+RunHLTPhy2017F+TIER0EXP+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  161  ls
+  162  vim step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  163  cd ..
+  164  ls
+  165  rm -rf 1001.1_RunHLTPhy2017F+RunHLTPhy2017F+TIER0EXP+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL/
+  166  vim Configuration/PyReleaseValidation/python/relval_production.py
+  167  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  168  vim Configuration/PyReleaseValidation/python/relval_production.py
+  169  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  170  vim Configuration/PyReleaseValidation/python/relval_production.py
+  171  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  172  vim Configuration/PyReleaseValidation/python/relval_production.py
+  173  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  174  vim Configuration/PyReleaseValidation/python/relval_production.py
+  175  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  176  scram b -j10
+  177  ls
+  178  top
+  179  ls
+  180  scram b -j10
+  181  ls
+  182  runTheMatrix.py -l 1001.1 --command=' -n 100' > 1001.1.log 2>&1 &
+  183  runTheMatrix.py -l 1040.1 --command=' -n 20' > 1040.1.log 2>&1 &
+  184  top
+  185  ls
+  186  cd 1040.1_RunExpressPhy2017F+RunExpressPhy2017F+TIER0EXPSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL
+  187  ls
+  188  conddb --db promptCalibConditions.db listTags
+  189  conddb --db promptCalibConditions.db list SiPixelQualityFromDbRcd_permanentBad
+  190  ls
+  191  cd ..
+  192  ls
+  193  cd 1001.1_RunHLTPhy2017F+RunHLTPhy2017F+TIER0EXP+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  194  ls
+  195  vim step2_RunHLTPhy2017F+RunHLTPhy2017F+TIER0EXP+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  196  cd ..
+  197  ls
+  198  vim Configuration/PyReleaseValidation/python/relval_production.py
+  199  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  200  ls
+  201  vim 1001.1_RunHLTPhy2017F+RunHLTPhy2017F+TIER0EXP+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL/step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py 
+  202  ls
+  203  scram b -j10
+  204  ls
+  205  rm -rf 1001.1_RunHLTPhy2017F+RunHLTPhy2017F+TIER0EXP+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  206  runTheMatrix.py -l 1001.1 -ne
+  207  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  208  vim Configuration/PyReleaseValidation/python/relval_production.py
+  209  scram b -j10
+  210  ls
+  211  runTheMatrix.py -l 1001.1 -ne
+  212  ls
+  213  runTheMatrix.py -l 1001.1 --command=' -n 20' > 1001.1.log 2>&1 &
+  214  top
+  215  ls
+  216  cd 1001.1_RunHLTPhy2017F+RunHLTPhy2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL/
+  217  ls
+  218  vim step2_RunHLTPhy2017F+RunHLTPhy2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  219  ls
+  220  vim step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  221  cmsRun step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py > debug.log 2>&1 &
+  222  vim debug.log 
+  223  vim + debug.log 
+  224  ls
+  225  vim step2_RunHLTPhy2017F+RunHLTPhy2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  226  vim + debug.log 
+  227  ls
+  228  vim step2_RunHLTPhy2017F+RunHLTPhy2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.l
+  229  vim debug.log 
+  230  vim + debug.log 
+  231  ls
+  232  vim step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  233  cmsRun step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py > debug.log 2>&1 &
+  234  ls
+  235  vim debug.log 
+  236  top
+  237  ls
+  238  tail -f debug.log 
+  239  cd ..
+  240  ls
+  241  cd 1001.1_RunHLTPhy2017F+RunHLTPhy2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  242  ls
+  243  vim debug.log 
+  244  vim + debug.log 
+  245  ls
+  246  cd ..
+  247  ls
+  248  vim Configuration/PyReleaseValidation/python/relval_production.py
+  249  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  250  ls
+  251  scram b -j10
+  252  ls
+  253  runTheMatrix.py -l 1001.1 -ne
+  254  ls
+  255  runTheMatrix.py -l 1001.1 --command=' -n 10' > 1001.1.log 2>&1 &
+  256  ls
+  257  top
+  258  ls
+  259  top
+  260  ls
+  261  top
+  262  ls
+  263  git diff --name-only
+  264  git diff Configuration/AlCa/python/autoAlca.py
+  265  ls
+  266  git diff --name-only
+  267  git diff CalibTracker/SiPixelQuality/plugins/SiPixelStatusHarvester.cc
+  268  pwd
+  269  ls
+  270  top
+  271  ls
+  272  cd 1001.1_RunHLTPhy2017B+RunHLTPhy2017B+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  273  ls
+  274  vim step2_RunHLTPhy2017B+RunHLTPhy2017B+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  275  ls
+  276  vim step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py 
+  277  top
+  278  ls
+  279  tail -f step2_RunHLTPhy2017B+RunHLTPhy2017B+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  280  top
+  281  ls
+  282  vim step2_RunHLTPhy2017B+RunHLTPhy2017B+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  283  vim step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  284  ls
+  285  cmsRun step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  286  ls
+  287  vim step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  288  cmsRun step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  289  vim step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  290  cd ..
+  291  ls
+  292  rm -rf 1001.1_RunHLTPhy2017B+RunHLTPhy2017B+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  293  top
+  294  ls
+  295  vim Configuration/PyReleaseValidation/python/relval_production.py
+  296  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  297  scram b -j10
+  298  ls
+  299  rm -rf 1001.1_RunHLTPhy2017B+RunHLTPhy2017B+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  300  pwd
+  301  pcl
+  302  ls
+  303  cd PullRequest
+  304  ls
+  305  cd CMSSW_10_1_X
+  306  ls
+  307  cd CMSSW_10_1_X_2018-03-04-2300/src/
+  308  cmsenv
+  309  ls
+  310  gridcert
+  311  rm -rf 1001.1_RunHLTPhy2017B+RunHLTPhy2017B+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  312  scram b -j10
+  313  ls
+  314  runTheMatrix.py -l 1001.1 --command=' -n 5' > 1001.1.log 2>&1 &
+  315  ls
+  316  cd 1001.1_RunHLTPhy2017B+RunHLTPhy2017B+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  317  ls
+  318  tail -f step2_RunHLTPhy2017B+RunHLTPhy2017B+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  319  cd ..
+  320  ls
+  321  runTheMatrix.py -l 1001.0 --command=' -n 5' > 1001.0 2>&1 &
+  322  cd 1001.1_RunHLTPhy2017B+RunHLTPhy2017B+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  323  ls
+  324  vim step2_RunHLTPhy2017B+RunHLTPhy2017B+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  325  ls
+  326  vim step2_RunHLTPhy2017B+RunHLTPhy2017B+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log 
+  327  vim step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_ENDJOB.py 
+  328  ls
+  329  cmsRun step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_ENDJOB.py
+  330  ls
+  331  cd ..
+  332  ls
+  333  vim Configuration/PyReleaseValidation/python/relval_production.py
+  334  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  335  ls
+  336  scram b -j10
+  337  ls
+  338  top
+  339  ls
+  340  rm -rf 1001.1_RunHLTPhy2017B+RunHLTPhy2017B+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  341  pwd
+  342  top
+  343  pwd
+  344  bash
+  345  cd /afs/cern.ch/work/t/tocheng/AlCaDB/PixelOffline/PixelQuality/PullRequest/CMSSW_10_1_X/CMSSW_10_1_X_2018-03-04-2300/src
+  346  ls
+  347  cmsenv
+  348  rm -rf 1001.1_RunHLTPhy2017B+RunHLTPhy2017B+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  349  runTheMatrix.py -l 1001.1 --command=' -n 10' > 1001.1.log 2>&1 &
+  350  ls
+  351  cd 1001.0_RunMinBias2011A+RunMinBias2011A+TIER0EXP+ALCAEXP+ALCAHARVD1+ALCAHARVD2+ALCAHARVD3+ALCAHARVD4+ALCAHARVD5
+  352  ls
+  353  cd ..
+  354  ls
+  355  vim 1001.1.log
+  356  gridcert
+  357  runTheMatrix.py -l 1001.1 --command=' -n 10' > 1001.1.log 2>&1 &
+  358  ls
+  359  cd 1001.0_RunMinBias2011A+RunMinBias2011A+TIER0EXP+ALCAEXP+ALCAHARVD1+ALCAHARVD2+ALCAHARVD3+ALCAHARVD4+ALCAHARVD5
+  360  run
+  361  cd ..
+  362  ls
+  363  runTheMatrix.py -l 1001.0 --command=' -n 10' > 1001.0.log 2>&1 &
+  364  ls
+  365  cd 1001.0_RunMinBias2011A+RunMinBias2011A+TIER0EXP+ALCAEXP+ALCAHARVD1+ALCAHARVD2+ALCAHARVD3+ALCAHARVD4+ALCAHARVD5
+  366  ls
+  367  vim step1_dasquery.log
+  368  vim step1_lumiRanges.log
+  369  cd ..
+  370  ls
+  371  rm -rf 1001.0_RunMinBias2011A+RunMinBias2011A+TIER0EXP+ALCAEXP+ALCAHARVD1+ALCAHARVD2+ALCAHARVD3+ALCAHARVD4+ALCAHARVD5
+  372  ls
+  373  rm 1001.0
+  374  rm 1001.0.log
+  375  ls
+  376  cd 1001.1_RunHLTPhy2017B+RunHLTPhy2017B+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  377  ls
+  378  tail -f step2_RunHLTPhy2017B+RunHLTPhy2017B+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  379  ls
+  380  cd ..
+  381  ls
+  382  cd 1001.1_RunHLTPhy2017B+RunHLTPhy2017B+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  383  ls
+  384  vim step2_RunHLTPhy2017B+RunHLTPhy2017B+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  385  ls
+  386  cd ..
+  387  ls
+  388  vim Configuration/PyReleaseValidation/python/relval_production.py
+  389  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  390  ls
+  391  rm -rf 1001.1*
+  392  pwd
+  393  pcl
+  394  ls
+  395  cd PullRequest/
+  396  ls
+  397  cd CMSSW_10_1_X/
+  398  ls
+  399  cd Develop/
+  400  ls
+  401  cd CMSSW_10_1_X_2018-03-04-2300/src/
+  402  cmsenv
+  403  ls
+  404  git diff
+  405  ls
+  406  rm -rf 1040.0_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL/
+  407  ls
+  408  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  409  scram b -j 10
+  410  ls
+  411  rm *.log
+  412  runTheMatrix.py -l 1040.1 --command=' -n 10 ' > 1040.0.log 2>&1 &
+  413  gridcert
+  414  ls
+  415  cd 1040.1_RunExpressPhy2017F+RunExpressPhy2017F+TIER0EXPSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL/
+  416  ls
+  417  vim step3_ALCAOUTPUT_ALCA.py
+  418  cd ..
+  419  ls
+  420  rm -rf *.log
+  421  rm -rf 1040.1_RunExpressPhy2017F+RunExpressPhy2017F+TIER0EXPSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL
+  422  cd Configuration/PyReleaseValidation/python/
+  423  ls
+  424  vim relval_production.py
+  425  vim relval_steps.py
+  426  scram b -j10
+  427  cd ../../..
+  428  ls
+  429  scram b -j10
+  430  runTheMatrix.py -l 1040.1 -ne
+  431  runTheMatrix.py -l 1040.1 --command=' -n 10 ' > 1040.0.log 2>&1 &
+  432  ls
+  433  cd 1040.1_RunExpressPhy2017F+RunExpressPhy2017F+TIER0EXPSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL
+  434  ls
+  435  vim step3_ALCAOUTPUT_ALCA.py
+  436  ls
+  437  cd ..
+  438  ls
+  439  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  440  scram b clean
+  441  ls Configuration/PyReleaseValidation/python/
+  442  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  443  scram b -j10
+  444  ls
+  445  rm -rf 1040.1_RunExpressPhy2017F+RunExpressPhy2017F+TIER0EXPSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL/
+  446  runTheMatrix.py -l 1040.1 -ne
+  447  runTheMatrix.py -l 1040.1 --command=' -n 10 ' > 1040.0.log 2>&1 &
+  448  ls
+  449  cd 1040.1_RunExpressPhy2017F+RunExpressPhy2017F+TIER0EXPSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL/
+  450  ls
+  451  vim step3_ALCAOUTPUT_ALCA.py
+  452  cd ..
+  453  ls
+  454  cd 1001.0_RunMinBias2011A+RunMinBias2011A+TIER0EXP+ALCAEXP+ALCAHARVD1+ALCAHARVD2+ALCAHARVD3+ALCAHARVD4+ALCAHARVD5_backup
+  455  ls
+  456  vim step3_ALCAOUTPUT_ALCA.py
+  457  cd ..
+  458  ls
+  459  runTheMatrix.py -l 1001 -ne
+  460  ls
+  461  ls 1040.1_RunExpressPhy2017F+RunExpressPhy2017F+TIER0EXPSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL
+  462  vim step3_ALCAOUTPUT_ALCA.py
+  463  cd 1040.1_RunExpressPhy2017F+RunExpressPhy2017F+TIER0EXPSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL
+  464  ls
+  465  vim step3_RunExpressPhy2017F+RunExpressPhy2017F+TIER0EXPSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL.log
+  466  vim step3_ALCAOUTPUT_ALCA.py
+  467  cd ..
+  468  ls
+  469  cd Configuration/PyReleaseValidation/python/
+  470  ls
+  471  vim relval_production.py
+  472  vim relval_steps.py
+  473  vim relval_production.py
+  474  vim relval_steps.py
+  475  vim relval_production.py
+  476  cd ../../..
+  477  ls
+  478  cmsenv
+  479  scram b -j10
+  480  ls
+  481  runTheMatrix.py -l 1001.2 -ne
+  482  runTheMatrix.py -l 1001.2 --command=' -n 10' > 1001.2.log 2>&1 &
+  483  top
+  484  ls
+  485  tail -f 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXP+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL/step2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXP+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  486  ls
+  487  tail -f 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXP+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL/step2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXP+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  488  top
+  489  tail -f 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXP+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL/step2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXP+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  490  ls
+  491  cd 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXP+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL/
+  492  ls
+  493  vim step2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXP+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  494  ls
+  495  python -i step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  496  cd ..
+  497  ls
+  498  runTheMatrix.py -l 1001.2 --command=' -n 10' > 1001.2.log 2>&1 &
+  499  vim 1001.2.log 
+  500  runTheMatrix.py -l 1001.2 -ne
+  501  runTheMatrix.py -l 1040.1 -ne
+  502  ls
+  503  cd 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXP+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL/
+  504  ls
+  505  cd ..
+  506  ls
+  507  cmsDriver.py step2  --conditions auto:run1_data -s RAW2DIGI,L1Reco,RECO,EI,ALCAPRODUCER:@allForExpress+AlCaPCCZeroBiasFromRECO+AlCaPCCRandomFromRECO,DQM:@express,ENDJOB --process RECO --data  --eventcontent ALCARECO,DQM --runUnscheduled  --scenario pp --datatier ALCARECO,DQMIO --customise Configuration/DataProcessing/RecoTLR.customiseExpress -n 100 --non_exec
+  508  cmsDriver.py step2  --conditions auto:run1_data -s RAW2DIGI,L1Reco,RECO,EI,ALCAPRODUCER:@allForExpress+AlCaPCCZeroBiasFromRECO+AlCaPCCRandomFromRECO,DQM:@express,ENDJOB --process RECO --data  --eventcontent ALCARECO,DQM --runUnscheduled  --scenario pp --datatier ALCARECO,DQMIO --customise Configuration/DataProcessing/RecoTLR.customiseExpress -n 100 --no_exec
+  509  ls
+  510  vim step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.p
+  511  runTheMatrix.py -l 1040.1 -ne
+  512  runTheMatrix.py -l 1001.2 -ne
+  513  ls
+  514  vim Configuration/PyReleaseValidation/python/relval_production.py
+  515  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  516  ls
+  517  ls 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXP+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  518  rm -rf 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXP+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL/
+  519  pwd
+  520  cd /afs/cern.ch/work/t/tocheng/AlCaDB/PixelOffline/PixelQuality/PullRequest/CMSSW_10_1_X/Develop/CMSSW_10_1_X_2018-03-04-2300/src
+  521  cmsenv
+  522  rm -rf 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXP+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL/
+  523  ls
+  524  cmsenv
+  525  runTheMatrix.py -l 1001.2 --command=' -n 10' > 1001.2.log 2>&1 &
+  526  top
+  527  ls
+  528  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  529  vim Configuration/PyReleaseValidation/python/relval_production.py
+  530  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  531  ls 1040.1_RunExpressPhy2017F+RunExpressPhy2017F+TIER0EXPSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL/
+  532  vim 1040.1_RunExpressPhy2017F+RunExpressPhy2017F+TIER0EXPSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL/step2_RAW2DIGI_L1Reco_ALCAPRODUCER_ENDJOB.py
+  533  vim 1040.1_RunExpressPhy2017F+RunExpressPhy2017F+TIER0EXPSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL/step3_ALCAOUTPUT_ALCA.py 
+  534  vim 1040.1_RunExpressPhy2017F+RunExpressPhy2017F+TIER0EXPSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL/step4_ALCAHARVEST.py 
+  535  ls
+  536  scram b -j10
+  537  ls
+  538  cd 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXP+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  539  ls
+  540  vim step2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXP+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  541  cd ..
+  542  ls
+  543  cd Configuration/PyReleaseValidation/python/
+  544  ls
+  545  vim relval_standard.py
+  546  runTheMatrix.py -l 136.8391 -ne
+  547  runTheMatrix.py -l 1030 -ne
+  548  runTheMatrix.py -l 136.8391 -ne
+  549  ls
+  550  vim relval_steps.py
+  551  vim relval_production.py
+  552  cd ../..
+  553  ls
+  554  cd ..
+  555  ls
+  556  scram b -j10
+  557  runTheMatrix.py -l 1040.0 -ne
+  558  runTheMatrix.py -l 1040.0 --command=' -n 10' > 1040.0.log 2>&1 &
+  559  ls
+  560  rm -rf 1040.1_RunExpressPhy2017F+RunExpressPhy2017F+TIER0EXPSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL
+  561  ls
+  562  rm -rf 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXP+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  563  runTheMatrix.py -l 1001.2 --command=' -n 10' > 1001.2.log 2>&1 &
+  564  runTheMatrix.py -l 1001.2 -ne
+  565  top
+  566  ls
+  567  cd 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  568  ls
+  569  ls ../1040.0_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL
+  570  cd ../1040.0_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL
+  571  ls
+  572  vim step2_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL.log
+  573  cd ..
+  574  ls
+  575  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  576  vim Configuration/PyReleaseValidation/python/relval_production.py
+  577  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  578  scram b -j10
+  579  runTheMatrix.py -l 1040.0 --command=' -n 10' > 1040.0.log 2>&1 &
+  580  ls
+  581  cd 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  582  ls
+  583  vim step2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  584  cd ..
+  585  ls
+  586  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  587  scram b -j10
+  588  ls
+  589  top
+  590  ls
+  591  cd 1040.0_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL/
+  592  ls
+  593  vim step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  594  ls
+  595  vim step2_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL.log
+  596  vim step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  597  cd ..
+  598  ls
+  599  cd 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL/
+  600  ls
+  601  vim step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  602  cd ..
+  603  ls
+  604  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  605  vim Configuration/PyReleaseValidation/python/relval_production.py
+  606  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  607  scram b -j10
+  608  ls
+  609  rm -rf 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  610  rm -rf 1040.0_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL
+  611  ls
+  612  scram b -j10
+  613  ls
+  614  rm step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  615  ls
+  616  runTheMatrix.py -l 1040.0 > 1040.0.log 2>&1 &
+  617  ls
+  618  top
+  619  ls
+  620  ls 1040.0_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL
+  621  runTheMatrix.py -l 1001.2 > 1001.2.log 2>&1 &
+  622  top
+  623  ls
+  624  cd 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  625  ls
+  626  vim step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  627  vim step2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  628  cd ..
+  629  ls
+  630  vim 1040.0_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL
+  631  ls
+  632  cd 1040.0_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL
+  633  ls
+  634  vim step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  635  cd ../1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL/
+  636  ls
+  637  vim step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py 
+  638  cd ..
+  639  ls
+  640  top
+  641  ls
+  642  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  643  top
+  644  ls
+  645  cd 1040.0_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL/
+  646  ls
+  647  vim step2_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL.log
+  648  cd ..
+  649  ls
+  650  rm -rf 1040.0_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL/
+  651  pwd
+  652  cd /afs/cern.ch/work/t/tocheng/AlCaDB/PixelOffline/PixelQuality/PullRequest/CMSSW_10_1_X/Develop/CMSSW_10_1_X_2018-03-04-2300/src
+  653  cmsenv
+  654  ls
+  655  rm -rf 1040.0_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL/
+  656  ls
+  657  scram b -j10
+  658  ls
+  659  runTheMatrix.py -l 1040.0 -ne
+  660  runTheMatrix.py -l 1040.0 > 1040.0.log 2>&1 &
+  661  ls
+  662  top
+  663  ls
+  664  cd 1040.0_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL
+  665  ls
+  666  tail -f step2_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL.log
+  667  ls
+  668  cd ..
+  669  ls
+  670  cd 1001.0_RunMinBias2011A+RunMinBias2011A+TIER0EXP+ALCAEXP+ALCAHARVD1+ALCAHARVD2+ALCAHARVD3+ALCAHARVD4+ALCAHARVD5_backup/
+  671  ls
+  672  cd ..
+  673  ls
+  674  cd 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL/
+  675  ls
+  676  vim step2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log 
+  677  cd ..
+  678  ls
+  679  cd 1040.0_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL
+  680  ls
+  681  vim step2_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL.log
+  682  cd ..
+  683  ls
+  684  cd 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  685  ls
+  686  vim step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  687  cd ..
+  688  ls
+  689  top
+  690  ;
+  691  ls
+  692  vim Configuration/AlCa/python/autoAlca.py
+  693  scram b -j10
+  694  ls
+  695  rm -rf 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  696  ls
+  697  runTheMatrix.py -l 1001.2 -ne
+  698  runTheMatrix.py -l 1001.2 > 1001.2.log 2>&1 &
+  699  ls
+  700  tail -f step3_runUnscheduled_RAW2DIGI_L1Reco_RECO_EI_PAT_ALCA.py
+  701  top
+  702  ls
+  703  top
+  704  ls
+  705  cd 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  706  ls
+  707  top
+  708  ls
+  709  vim step2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  710  cd ..
+  711  ls
+  712  top
+  713  ls
+  714  cd 1040.0_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL
+  715  ls
+  716  vim step2_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL.log
+  717  cd ..
+  718  ls
+  719  vim Configuration/AlCa/python/autoAlca.py
+  720  scram b -j10
+  721  ls
+  722  rm -rf 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  723  pwd
+  724  cd /afs/cern.ch/work/t/tocheng/AlCaDB/PixelOffline/PixelQuality/PullRequest/CMSSW_10_1_X/Develop/CMSSW_10_1_X_2018-03-04-2300/src/
+  725  cmsenv
+  726  ls
+  727  rm -rf 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  728  runTheMatrix.py -l 1001.2 > 1001.2.log 2>&1 &
+  729  cd 1040.0_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL
+  730  ls
+  731  vim step2_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL.log
+  732  vim step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  733  cd ..
+  734  ls
+  735  top
+  736  ls
+  737  cd 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  738  ls
+  739  vim step2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  740  cd ..
+  741  ls
+  742  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  743  cp ../../../CMSSW_10_1_X_2018-03-04-2300/src/Configuration/AlCa/python/autoAlca.py .
+  744  vim autoAlca.py 
+  745  mv autoAlca.py Configuration/AlCa/python
+  746  cmsenv
+  747  top
+  748  cmsenv
+  749  scram b -j10
+  750  runTheMatrix.py -l 1001.2 -ne
+  751  runTheMatrix.py -l 1001.2 > 1001.2.log 2>&1 &
+  752  cd 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELC
+  753  ls
+  754  vim step2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  755  cd ..
+  756  ls
+  757  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  758  top
+  759  ls
+  760  scram b -j10
+  761  runTheMatrix.py -l 1040.0 -ne
+  762  runTheMatrix.py -l 1040.0 > 1040.0.log 2>&1 &
+  763  ls
+  764  cd 1040.0_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL
+  765  ls
+  766  vim step2_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL.log
+  767  vim step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  768  cd ..
+  769  ls
+  770  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  771  scram b -j1
+  772  ls
+  773  rm -rf 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  774  runTheMatrix.py -l 1001.2 -ne
+  775  runTheMatrix.py -l 1001.2 > 1001.2.log 2>&1 &
+  776  ls
+  777  top
+  778  ls
+  779  ls 1040.0_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL
+  780  tail -f 1040.0_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL/step2_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL.log 
+  781  ls
+  782  cd 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  783  ls
+  784  vim step2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  785  ls
+  786  vim step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  787  cmsDriver.py step2 --conditions auto:run2_data_promptlike -s RAW2DIGI,L1Reco,RECO,EI,ALCAPRODUCER:SiStripCalZeroBias+SiPixelCalZeroBias+AlCaPCCZeroBiasFromRECO+AlCaPCCRandomFromRECO,DQM:@express,ENDJOB --process RECO --data --eventcontent ALCARECO,DQM --runUnscheduled --scenario pp --datatier ALCARECO,DQMIO --customise Configuration/DataProcessing/RecoTLR.customiseExpress -n 100 --filein filelist:step1_dasquery.log --lumiToProcess step1_lumiRanges.log --fileout file:step2.root
+  788  cd ..
+  789  ls
+  790  top
+  791  ls
+  792  cd 1040.0_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL
+  793  ls
+  794  vim step2_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL.log
+  795  cd ..
+  796  ls
+  797  cd 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  798  ls
+  799  vim step2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  800  ls
+  801  top
+  802  ls
+  803  ls -
+  804  ls -a
+  805  rm .step2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log.swp 
+  806  vim ../1040.0_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL/step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py 
+  807  ls
+  808  top
+  809  cmsDriver.py step2 --datatier ALCARECO,DQMIO --conditions auto:run2_data_promptlike --scenario pp -s RAW2DIGI,L1Reco,RECO,EI,ALCAPRODUCER:SiStripCalZeroBias,DQM:@express,ENDJOB --process RECO --customise Configuration/DataProcessing/RecoTLR.customiseExpress --data --era Run2_2017 --eventcontent ALCARECO,DQM -n 100 --filein filelist:step1_dasquery.log --lumiToProcess step1_lumiRanges.log --fileout file:step2.root
+  810  cmsDriver.py step2 --datatier ALCARECO,DQMIO --conditions auto:run2_data_promptlike --scenario pp -s RAW2DIGI,L1Reco,RECO,EI,ALCAPRODUCER:SiStripCalZeroBias+SiPixelCalZeroBias,DQM:@express,ENDJOB --process RECO --customise Configuration/DataProcessing/RecoTLR.customiseExpress --data --era Run2_2017 --eventcontent ALCARECO,DQM -n 100 --filein filelist:step1_dasquery.log --lumiToProcess step1_lumiRanges.log --fileout file:step2.root
+  811  cd ..
+  812  ls
+  813  rm -rf 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  814  pwd
+  815  bash
+  816  pcl
+  817  ls
+  818  cd Develop/
+  819  ls
+  820  cd CMSSW_10_1_X_2018-03-04-2300/src/
+  821  cmsenv
+  822  ls
+  823  rm -rf 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  824  pwd
+  825  top
+  826  ls
+  827  cd 1040.0_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL
+  828  ls
+  829  vim step2_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL.log
+  830  cd ..
+  831  ls
+  832  top
+  833  ls
+  834  rm -rf 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL/
+  835  rm -rf 1040.0_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL
+  836  ls
+  837  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  838  scram b -j10
+  839  ls
+  840  rm -rf 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  841  ls
+  842  runTheMatrix.py -l 1001.2 -ne
+  843  vim Configuration/PyReleaseValidation/python/relval_production.py
+  844  vim Configuration/PyReleaseValidation/python/relval_standard.py
+  845  runTheMatrix.py -l 136.837 -ne
+  846  runTheMatrix.py -l 1001.2 -ne
+  847  runTheMatrix.py -l 1001.2 > 1001.2.log 2>&1 &
+  848  gridcert
+  849  runTheMatrix.py -l 136.837 > 136.837.log 2>&1 &
+  850  ls
+  851  top
+  852  ;s
+  853  ls
+  854  cd 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  855  ls
+  856  vim step2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  857  ls
+  858  top
+  859  cd ..
+  860  ls
+  861  ls 136.837_RunZeroBias2017F+RunZeroBias2017F+HLTDR2_2017+RECODR2_2017reHLT_Prompt+HARVEST2017/
+  862  ls
+  863  cd 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  864  ls
+  865  vim step2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  866  ls
+  867  vim step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  868  ls
+  869  top
+  870  ls
+  871  vim step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  872  cmsDriver.py step2 --conditions auto:run2_data_promptlike -s RAW2DIGI,L1Reco,RECO,EI,ALCAPRODUCER:SiStripCalZeroBias+SiPixelCalZeroBias+AlCaPCCZeroBiasFromRECO+AlCaPCCRandomFromRECO,DQM:@express,ENDJOB --process RECO --data --eventcontent ALCARECO,DQM --runUnscheduled --scenario pp --datatier ALCARECO,DQMIO --customise Configuration/DataProcessing/RecoTLR.customiseExpress -n 100 --filein filelist:step1_dasquery.log --lumiToProcess step1_lumiRanges.log --fileout file:step2.root
+  873  cmsDriver.py step2 --conditions auto:run2_data_promptlike -s RAW2DIGI,L1Reco,RECO,EI,ALCAPRODUCER:SiPixelCalZeroBias+AlCaPCCZeroBiasFromRECO+AlCaPCCRandomFromRECO,DQM:@express,ENDJOB --process RECO --data --eventcontent ALCARECO,DQM --runUnscheduled --scenario pp --datatier ALCARECO,DQMIO --customise Configuration/DataProcessing/RecoTLR.customiseExpress -n 100 --filein filelist:step1_dasquery.log --lumiToProcess step1_lumiRanges.log --fileout file:step2.root
+  874  cmsDriver.py step2 --conditions auto:run2_data_promptlike -s RAW2DIGI,L1Reco,RECO,EI,ALCAPRODUCER:SiStripCalZeroBias+SiPixelCalZeroBias+AlCaPCCRandomFromRECO,DQM:@express,ENDJOB --process RECO --data --eventcontent ALCARECO,DQM --runUnscheduled --scenario pp --datatier ALCARECO,DQMIO --customise Configuration/DataProcessing/RecoTLR.customiseExpress -n 100 --filein filelist:step1_dasquery.log --lumiToProcess step1_lumiRanges.log --fileout file:step2.root
+  875  cmsDriver.py step2 --conditions auto:run2_data_promptlike -s RAW2DIGI,L1Reco,RECO,EI,ALCAPRODUCER:SiStripCalZeroBias+SiPixelCalZeroBias,DQM:@express,ENDJOB --process RECO --data --eventcontent ALCARECO,DQM --runUnscheduled --scenario pp --datatier ALCARECO,DQMIO --customise Configuration/DataProcessing/RecoTLR.customiseExpress -n 100 --filein filelist:step1_dasquery.log --lumiToProcess step1_lumiRanges.log --fileout file:step2.root
+  876  cd ..
+  877  ls
+  878  cd 136.837_RunZeroBias2017F+RunZeroBias2017F+HLTDR2_2017+RECODR2_2017reHLT_Prompt+HARVEST2017
+  879  ls
+  880  vim step3_RAW2DIGI_L1Reco_RECO_EI_PAT_ALCA_DQM.py
+  881  ls
+  882  top
+  883  ;
+  884  ls
+  885  tail -f step3_RunZeroBias2017F+RunZeroBias2017F+HLTDR2_2017+RECODR2_2017reHLT_Prompt+HARVEST2017.log
+  886  ls
+  887  cd ..
+  888  ls
+  889  rm -rf 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL/
+  890  ls
+  891  pwd
+  892  ls
+  893  vim Configuration/PyReleaseValidation/python/relval_production.py
+  894  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  895  ls
+  896  runTheMatrix.py -l 1001.2 -ne
+  897  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  898  scram b -j10
+  899  vim +1401 Configuration/PyReleaseValidation/python/relval_steps.py
+  900  scram b -j10
+  901  ls
+  902  rm -rf 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  903  pwd
+  904  pcl
+  905  ls
+  906  cd Develop/
+  907  ls
+  908  cd CMSSW_10_1_X_2018-03-04-2300/src/
+  909  cmsenv
+  910  runTheMatrix.py -l 1001.2 -ne
+  911  runTheMatrix.py -l 1001.2 --command=' -n 10' > 1001.2.log 2>&1 &
+  912  gridcert
+  913  runTheMatrix.py -l 1001.2 --command=' -n 10' > 1001.2.log 2>&1 &
+  914  top
+  915  pwd
+  916  ls
+  917  top
+  918  ls
+  919  cd 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL/
+  920  ls
+  921  vim step3_ALCAOUTPUT_ALCA.py
+  922  ls
+  923  vim step3_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  924  ls
+  925  vim step3_ALCAOUTPUT_ALCA.py
+  926  ls
+  927  root -l step2.root
+  928  ls
+  929  top
+  930  ls
+  931  vim step3_ALCAOUTPUT_ALCA.py
+  932  cmsDriver.py step3 --datatier ALCARECO --triggerResultsProcess RECO --conditions auto:run2_data -s ALCAOUTPUT:SiStripCalZeroBias+TkAlMinBias+LumiPixelsMinBias+AlCaPCCZeroBiasFromRECO+AlCaPCCRandomFromRECO+SiPixelCalZeroBias,ALCA:PromptCalibProd+PromptCalibProdSiStrip+PromptCalibProdSiStripGains+PromptCalibProdSiStripGainsAAG+PromptCalibProdSiPixelAli+PromptCalibProdSiPixel --eventcontent ALCARECO -n 10 --filein file:step2.root --fileout file:step3.root
+  933  cmsDriver.py step3 --datatier ALCARECO --triggerResultsProcess RECO --conditions auto:run2_data -s ALCAOUTPUT:SiStripCalZeroBias+TkAlMinBias+LumiPixelsMinBias+AlCaPCCZeroBiasFromRECO+AlCaPCCRandomFromRECO+SiPixelCalZeroBias,ALCA:PromptCalibProd+PromptCalibProdSiStrip+PromptCalibProdSiStripGains+PromptCalibProdSiStripGainsAAG+PromptCalibProdSiPixelAli+PromptCalibProdSiPixel --eventcontent ALCARECO -n 10 --filein file:step2.root --fileout file:step3.root > step3_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log 2>&1 &
+  934  ls
+  935  cd ..
+  936  ls
+  937  cd 1040.0_RunZeroBias2017F+RunZeroBias2017F+TIER0RAWSIPIXELCAL+ALCASPLITSIPIXELCAL+ALCAHARVDSIPIXELCAL
+  938  ls
+  939  vim step3_ALCAOUTPUT_ALCA.py
+  940  ls
+  941  cd ..
+  942  ls
+  943  top
+  944  ls
+  945  cd 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  946  ls
+  947  tail -f step3_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  948  ls
+  949  cd ..
+  950  ls
+  951  vim Configuration/PyReleaseValidation/python/relval_production.py
+  952  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  953  vim Configuration/PyReleaseValidation/python/relval_production.py
+  954  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  955  vim Configuration/PyReleaseValidation/python/relval_production.py
+  956  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  957  vim Configuration/PyReleaseValidation/python/relval_production.py
+  958  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  959  vim Configuration/PyReleaseValidation/python/relval_production.py
+  960  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  961  vim Configuration/PyReleaseValidation/python/relval_production.py
+  962  vim Configuration/PyReleaseValidation/python/relval_steps.py
+  963  vim Configuration/PyReleaseValidation/python/relval_production.py
+  964  scram b -j10
+  965  ls
+  966  rm -rf 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  967  pwd
+  968  bash
+  969  pcl
+  970  ls
+  971  cd Develop/
+  972  ls
+  973  cd CMSSW_10_1_X_2018-03-04-2300/src/
+  974  cmsenv
+  975  ls
+  976  cd 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  977  ls
+  978  tail -f step2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL.log
+  979  ;s
+  980  ls
+  981  vim step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  982  ls
+  983  cmsRun step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  984  gridcert
+  985  cmsRun step2_RAW2DIGI_L1Reco_RECO_EI_ALCAPRODUCER_DQM_ENDJOB.py
+  986  ls
+  987  cd ..
+  988  ls
+  989  rm -rf 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+  990  pwd
+  991  cd /afs/cern.ch/work/t/tocheng/AlCaDB/PixelOffline/PixelQuality/PullRequest/CMSSW_10_1_X/Develop/CMSSW_10_1_X_2018-03-04-2300/src
+  992  cmsenv
+  993  ls
+  994  cmsenv
+  995  top
+  996  pwd
+  997  cmsenv
+  998  ls
+  999  rm -rf 1001.2_RunZeroBias2017F+RunZeroBias2017F+TIER0EXPRUN2+ALCAEXPRUN2+ALCAHARVDSIPIXELCAL
+ 1000  pwd
+ 1001  cd /eos
+ 1002  ls
+ 1003  cd cms
+ 1004  ls
+ 1005  cd store
+ 1006  ls
+ 1007  cd user/tocheng/
+ 1008  ls
+ 1009  rm CMSSW_8_0_26_patch1.tar.gz
+ 1010  ls
+ 1011  ls TkAli/
+ 1012  rm -rf TkAli
+ 1013  ls
+ 1014  cd X2l+MET+jets/
+ 1015  ls
+ 1016  cd Run2016
+ 1017  ls
+ 1018  ls SinglePhotonWithAK8_Cleaned
+ 1019  cd SinglePhotonWithAK8_Cleaned
+ 1020  ls
+ 1021  ls -lrth
+ 1022  rm *.log
+ 1023  ls
+ 1024  cd ..
+ 1025  ls
+ 1026  cd SinglePhoton2016H
+ 1027  ls
+ 1028  ls SinglePhoton_Run2016H_03Feb2017_ver2
+ 1029  cd ../..
+ 1030  ls
+ 1031  cd Run2016/
+ 1032  ls
+ 1033  mv SinglePhotonWithAK8_Cleaned SinglePhoton
+ 1034  ls
+ 1035  ls Samples/
+ 1036  cd ..
+ 1037  cd Run2016/
+ 1038  ls
+ 1039  cd SingleElectron
+ 1040  ls
+ 1041  cd SingleElectron_Run2016B_03Feb2017_ver2
+ 1042  ls
+ 1043  root -l 
+ 1044  pwd
+ 1045  WORKDIR 
+ 1046  ls
+ 1047  cd Heppy/
+ 1048  ls
+ 1049  cd CMSSW_8_0_26_patch1/src/
+ 1050  cmsenv
+ 1051  ls
+ 1052  cd CMGTools/XZZ2l2nu/
+ 1053  ls
+ 1054  cd cfg/
+ 1055  ls
+ 1056  cd data2016/
+ 1057  ls
+ 1058  cd sub/
+ 1059  ls
+ 1060  cd SinglePhoton2016H
+ 1061  ls
+ 1062  rm -rf SinglePhoton2016H
+ 1063  ls
+ 1064  gridcert
+ 1065  heppy_hadd.py SinglePhoton
+ 1066  ls
+ 1067  cd ..
+ 1068  heppy_hadd.py SinglePhoton
+ 1069  ls
+ 1070  cd SinglePhoton
+ 1071  ls
+ 1072  rm -rf SinglePhoton_Run2016H_03Feb2017_ver3
+ 1073* rm -rf SinglePhoton_Run2016D_03Feb2017_
+ 1074  cd ..
+ 1075  ls
+ 1076  ls SinglePhoton2016H
+ 1077  rm -rf SinglePhoton2016H
+ 1078  heppy_hadd.py SinglePhoton
+ 1079  rm -rf SinglePhoton/SinglePhoton_Run2016D_03Feb2017
+ 1080  heppy_hadd.py SinglePhoton
+ 1081  rm -rf SinglePhoton/SinglePhoton_Run2016B_03Feb2017_ver2
+ 1082  heppy_hadd.py SinglePhoton
+ 1083  ls
+ 1084  cd SinglePhoton
+ 1085  ls
+ 1086  cd ..
+ 1087  ls
+ 1088  rm -rf SinglePhoton/SinglePhoton_Run2016B_03Feb2017_ver2
+ 1089  rm -rf SinglePhoton/SinglePhoton_Run2016D_03Feb2017
+ 1090  rm -rf SinglePhoton/SinglePhoton_Run2016G_03Feb2017
+ 1091  rm -rf SinglePhoton/SinglePhoton_Run2016H_03Feb2017_ver2
+ 1092  rm -rf SinglePhoton/SinglePhoton_Run2016H_03Feb2017_ver3
+ 1093  heppy_hadd.py SinglePhoton
+ 1094  ls
+ 1095  cd SinglePhoton
+ 1096  ls
+ 1097  cd ..
+ 1098  ls
+ 1099  cd SinglePhoton/SinglePhoton_Run2016G_03Feb2017_Chunk106
+ 1100  ls
+ 1101  ls Loop/
+ 1102  ls
+ 1103  rm -rf Loop
+ 1104  cd LSFJOB_136960095/
+ 1105  ls
+ 1106  vim + STDOUT 
+ 1107  vim +126 /afs/cern.ch/work/t/tocheng/Heppy/CMSSW_8_0_26_patch1/python/CMGTools/XZZ2l2nu/analyzers/XZZPhotonAnalyzer.py"
+ 1108  vim +126 /afs/cern.ch/work/t/tocheng/Heppy/CMSSW_8_0_26_patch1/python/CMGTools/XZZ2l2nu/analyzers/XZZPhotonAnalyzer.py
+ 1109  cd ../..
+ 1110  ls
+ 1111  cd ..
+ 1112  ls
+ 1113  cd ..
+ 1114  ls
+ 1115  cd ..
+ 1116  ls
+ 1117  cd ..
+ 1118  ls
+ 1119  cd ..
+ 1120  ls
+ 1121  cd ../PhysicsTools/Heppy/python/physicsobjects/
+ 1122  ls
+ 1123  vim Photon.py
+ 1124  vim +126 /afs/cern.ch/work/t/tocheng/Heppy/CMSSW_8_0_26_patch1/python/CMGTools/XZZ2l2nu/analyzers/XZZPhotonAnalyzer.py"
+ 1125  vim +126 /afs/cern.ch/work/t/tocheng/Heppy/CMSSW_8_0_26_patch1/python/CMGTools/XZZ2l2nu/analyzers/XZZPhotonAnalyzer.py
+ 1126  cd ../../..
+ 1127  ls
+ 1128  cd Heppy
+ 1129  grep -i "eMax" *
+ 1130  grep -i "eMax" */*
+ 1131  grep -i "eMax" */*/*
+ 1132  grep -i "eMax" */*/*/*
+ 1133  grep -i "eMax" */*/*/*/*
+ 1134  ls
+ 1135  cd ..
+ 1136  ls
+ 1137  cd ..
+ 1138  ls
+ 1139  cd CMGTools/XZZ2l2nu/
+ 1140  ls
+ 1141  cd cfg/
+ 1142  ls
+ 1143  cd data2016/
+ 1144  ls
+ 1145  cd sub/
+ 1146  ls
+ 1147  vim +126 /afs/cern.ch/work/t/tocheng/Heppy/CMSSW_8_0_26_patch1/python/CMGTools/XZZ2l2nu/analyzers/XZZPhotonAnalyzer.py"
+ 1148  vim +126 /afs/cern.ch/work/t/tocheng/Heppy/CMSSW_8_0_26_patch1/python/CMGTools/XZZ2l2nu/analyzers/XZZPhotonAnalyzer.py
+ 1149  cd SinglePhoton/
+ 1150  ls
+ 1151  cd ..
+ 1152  ls
+ 1153  history > hist.log

@@ -1,0 +1,6 @@
+infile='./plots/test_metfilter_mu_.root'
+datahist='test_metfilter_mu___data_SingleEMU_Run2016B2H_ReReco_36p46'
+mchist=[
+'test_metfilter_mu___VVZReso_WZTo2L2Q',
+'test_metfilter_mu___ZJets_DYJetsToLL_M50_BIG_ResBos_Rc36p22']
+nonreshist='test_metfilter_mu___NONReso_muonegtrgsf'

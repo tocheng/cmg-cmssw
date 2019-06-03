@@ -1,0 +1,26 @@
+Warning in <TFile::Init>: successfully recovered 578 keys
+Using customized style
+ FCN=1872.1 FROM MIGRAD    STATUS=CONVERGED      37 CALLS          38 TOTAL
+                     EDM=4.15173e-21    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           2.31850e-01   1.84862e-03   1.72097e-05   9.90897e-08
+   2  p1           6.36144e-02   1.75545e-04   1.63422e-06   6.95662e-07
+Formula based function:     f_rho_ratio_dt_mc 
+    f_rho_ratio_dt_mc : [0]+[1]*x Ndim= 1, Npar= 2, Number= 0 
+ Formula expression: 
+	[p0]+[p1]*x 
+List of  Variables: 
+Var   0                    x =    0.000000 
+List of  Parameters: 
+Par   0                   p0 =    0.231850 
+Par   1                   p1 =    0.063614 
+Expression passed to Cling:
+	Double_t TFormula____id76870135910997656(Double_t *x,Double_t *p){ return p[0]+p[1]*x[0] ; }
+Info in <TCanvas::Print>: pdf file rho_rewegiht_b2g.pdf has been created
+Info in <TCanvas::SaveSource>: C++ Macro file: rho_rewegiht_b2g.C has been generated
+#############################################
+func = (0.232+0.064*x)
+#############################################
+
+

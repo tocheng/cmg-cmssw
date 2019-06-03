@@ -1,0 +1,24 @@
+
+For the gammajet configuration(run_xzz2l2nu_80x_cfg_photon_dt.py), the branch gjet_l1_trigerob_HLTbit in the output ntuple can be used to determin which HLT object has been matched with the photon. For example, "HLT_Photon50_R9Id90_HE10_IsoM" is the 3rd element defined in the list multtrg.HLTlist (in run_xzz2l2nu_80x_cfg_photon_dt.py), then by doing "gjet_l1_trigerob_HLTbit>>3&1", one can tell if HLT_Photon50_R9Id90_HE10_IsoM is matched with the photon (1 for yes 0 for no)
+
+"((gjet_l1_trigerob_HLTbit>>0&1&&gjet_l1_trigerob_pt<30)*PreScale22)+((gjet_l1_trigerob_HLTbit>>1&1&&gjet_l1_trigerob_pt<36)*PreScale30)+((gjet_l1_trigerob_HLTbit>>2&1&&gjet_l1_trigerob_pt<50)*PreScale36)+((gjet_l1_trigerob_HLTbit>>3&1&&gjet_l1_trigerob_pt<75)*PreScale50)+((gjet_l1_trigerob_HLTbit>>4&1&&gjet_l1_trigerob_pt<90)*PreScale75)+((gjet_l1_trigerob_HLTbit>>5&1&&gjet_l1_trigerob_pt<120)*PreScale90)+((gjet_l1_trigerob_HLTbit>>6&1&&gjet_l1_trigerob_pt<165)*PreScale120)+((gjet_l1_trigerob_HLTbit>>7&1)*PreScale165)"
+
+
+Similarly, for the single lepton HLT, the trigger bit is saved in llnunu_l1_l1/2_trigerob_HLTbit, the trigger list is saved in coreXZZ.py, as below:
+    HLTlist=[
+        'HLT_Ele105_CaloIdVT_GsfTrkIdT',
+        'HLT_Ele115_CaloIdVT_GsfTrkIdT',
+        'HLT_Mu45_eta2p1',
+        'HLT_Mu50',
+        'HLT_TkMu50',
+        'HLT_Ele23_Ele12_CaloIdL_TrackIdL_IsoVL_DZ',
+        'HLT_Ele17_Ele12_CaloIdL_TrackIdL_IsoVL_DZ',
+        'HLT_Ele23_WPLoose_Gsf',
+        'HLT_Ele22_eta2p1_WP75_Gsf',
+        'HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ',
+        'HLT_Mu17_TrkIsoVVL_TkMu8_TrkIsoVVL_DZ',
+        'HLT_IsoMu20',
+        'HLT_IsoTkMu20',
+        'HLT_IsoMu27',
+        ],
+For example, HLT_TkMu50 is the 4th element in the list, then llnunu_l1_l1/2_trigerob_HLTbit>>4&1 should tell if HLT_TkMu50 is matched with the lepton.

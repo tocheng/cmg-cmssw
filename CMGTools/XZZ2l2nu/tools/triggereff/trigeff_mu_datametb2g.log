@@ -1,0 +1,10 @@
+Info in <TCanvas::Print>: pdf file trigeff_mu_datametb2g.pdf has been created
+ Ntrg_l1p = 219173; Ntrg_l1f = 33734
+ Ntrg_l1pl2f = 128556; Ntrg_l1pl2p = 90617; Ntrg_l1fl2p = 14040; Ntrg_tot = 252907
+ Ntrg_l1p/Ntrg_tot = 0.866615; Ntrg_l1f/Ntrg_tot = 0.133385
+ Ntrg_l1pl2f/Ntrg_tot  = 0.508313; Ntrg_l1pl2p/Ntrg_tot  = 0.358302; Ntrg_l1fl2p/Ntrg_tot  = 0.0555145
+ (Ntrg_l1pl2f+Ntrg_l1pl2p+Ntrg_l1fl2p)/Ntrg_tot = 0.922129
+N_pass = 233353; N_tgsf = 230414; N_base = 252907
+N_pass/N_tgsf = 1.01276; N_pass/N_base = 0.922683; N_tgsf/N_base = 0.911062
+
+

@@ -1,0 +1,366 @@
+#==================================================================================================
+#   ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗                                      
+#  ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝                                      
+#  ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗                                     
+#  ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║                                     
+#  ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝                                     
+#   ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝                                      
+#                                                                                      
+#  ██████╗  █████╗ ██████╗  █████╗ ███╗   ███╗███████╗████████╗███████╗██████╗ ███████╗
+#  ██╔══██╗██╔══██╗██╔══██╗██╔══██╗████╗ ████║██╔════╝╚══██╔══╝██╔════╝██╔══██╗██╔════╝
+#  ██████╔╝███████║██████╔╝███████║██╔████╔██║█████╗     ██║   █████╗  ██████╔╝███████╗
+#  ██╔═══╝ ██╔══██║██╔══██╗██╔══██║██║╚██╔╝██║██╔══╝     ██║   ██╔══╝  ██╔══██╗╚════██║
+#  ██║     ██║  ██║██║  ██║██║  ██║██║ ╚═╝ ██║███████╗   ██║   ███████╗██║  ██║███████║
+#  ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚══════╝
+#                                                                                      
+#                                                                                           
+# Hengne Li @ CERN, 2016, initial version
+#==================================================================================================
+
+
+
+#====================================================================
+#  ╔═╗╔═╗╔╗╔╔═╗╦═╗╔═╗╦    ╔═╗╔═╗╦═╗╔═╗╔╦╗╔═╗╔╦╗╔═╗╦═╗╔═╗
+#  ║ ╦║╣ ║║║║╣ ╠╦╝╠═╣║    ╠═╝╠═╣╠╦╝╠═╣║║║║╣  ║ ║╣ ╠╦╝╚═╗
+#  ╚═╝╚═╝╝╚╝╚═╝╩╚═╩ ╩╩═╝  ╩  ╩ ╩╩╚═╩ ╩╩ ╩╚═╝ ╩ ╚═╝╩╚═╚═╝
+#====================================================================
+
+# debug
+debug: false
+
+# starting entry number 
+n_start: 0
+
+# number of entries to be run, -1 means all entries
+n_test: -1
+
+# n entries interval between which print once entry number
+n_interval: 1000000
+
+# tree branch config
+useLightTree: true
+storeErr: false
+removeHLTFlag: true
+removeMETFlag: true
+doMTUnc: true
+doMTUncDummy: false
+
+
+# tree selection string
+selection: (1)
+
+# store old branches 
+#storeOldBranches: true
+storeOldBranches: false
+
+
+
+#====================================================================
+#  ╔═╗╦ ╦  ╦ ╦╔═╗╦╔═╗╦ ╦╔╦╗╔═╗
+#  ╠═╝║ ║  ║║║║╣ ║║ ╦╠═╣ ║ ╚═╗
+#  ╩  ╚═╝  ╚╩╝╚═╝╩╚═╝╩ ╩ ╩ ╚═╝
+#====================================================================
+addPUWeights: true
+
+# PU weight protection, not greater than the value below
+PUWeightProtectionCut: 10
+
+# PU input files directory
+PUInputDir: data/pileup
+
+# PU input tags, "puWeight<tag>" branches will be added
+PUTags: 67921, 68075, 69200, moriondMC 
+
+# PU input root files, one-to-one correspnding to the tags above
+PUInputFileNames: pileup_MC_80x_271036-276811_67921.root, pileup_MC_80x_271036-276811_68075.root, pileup_MC_80x_271036-276811_69200.root, mcpileupmoriond.root
+
+# PU weight hist name
+PUWeightHistName: puweight_dtmc
+
+
+#====================================================================
+#  ╔═╗ ╦╔═╗╔╦╗╔═╗  ╔═╗╦╔═╦╔╦╗
+#  ║ ╦ ║║╣  ║ ╚═╗  ╚═╗╠╩╗║║║║
+#  ╚═╝╚╝╚═╝ ╩ ╚═╝  ╚═╝╩ ╩╩╩ ╩
+#====================================================================
+doGJetsSkim: true
+doGJetsSkimAddPhiWeight: false
+GJetsSkimInputFileName: data/gjets/study_gjets_data_b2h36p22fbinv_v5resbos_norm_modify.root
+
+GJetsSkimPhiWeightInputFileName: data/gjets/gjet_photon_phi_weight.root
+GJetsSkimRhoWeightInputFileName: data/gjets/get_rho_weight_36p22_psWt.root
+
+
+
+#====================================================================
+#  ╔╦╗╦ ╦  ╔═╗╔╦╗  ╦═╗╔═╗╔═╗╔═╗╦  ╦╔╗ 
+#  ║║║║ ║  ╠═╝ ║   ╠╦╝║╣ ║  ╠═╣║  ║╠╩╗
+#  ╩ ╩╚═╝  ╩   ╩   ╩╚═╚═╝╚═╝╩ ╩╩═╝╩╚═╝
+#====================================================================
+doMuonPtRecalib: false
+MuonPtRecalibInputForData: data/kalman/DATA_80X_13TeV.root
+MuonPtRecalibInputForMC: data/kalman/MC_80X_13TeV.root
+
+
+doElecPtRecalibSimpleData: false
+ElecPtRecalibSimpleDataScale: 1.00971
+
+doMuonPtRecalibSimpleData: false
+MuonPtRecalibSimpleDataScale: 0.999744
+
+
+#====================================================================
+#  ╔═╗╔╦╗  ╔═╗╔═╗  ╔═╗╔═╗╦═╗╦═╗╔═╗╔═╗╔╦╗╦╔═╗╔╗╔
+#  ╚═╗║║║  ╔═╝╔═╝  ║  ║ ║╠╦╝╠╦╝║╣ ║   ║ ║║ ║║║║
+#  ╚═╝╩ ╩  ╚═╝╚═╝  ╚═╝╚═╝╩╚═╩╚═╚═╝╚═╝ ╩ ╩╚═╝╝╚╝
+#====================================================================
+addZZCorrections: false
+ZZCorrectionEwkInputFileName: data/zzcorr/ZZ_EwkCorrections.dat
+ZZCorrectionQcdInputFileName: data/zzcorr/zzqcd.root
+
+
+#====================================================================
+# do JEC
+#====================================================================
+doJEC: false
+doJER: false
+
+JECParTxt_DATA_L2L3Residual: data/jec2016/Spring16_25nsV6_DATA_L2L3Residual_AK4PFchs.txt
+JECParTxt_DATA_L3Absolute:   data/jec2016/Spring16_25nsV6_DATA_L3Absolute_AK4PFchs.txt
+JECParTxt_DATA_L2Relative:   data/jec2016/Spring16_25nsV6_DATA_L2Relative_AK4PFchs.txt
+JECParTxt_DATA_L1FastJet:    data/jec2016/Spring16_25nsV6_DATA_L1FastJet_AK4PFchs.txt
+JECParTxt_DATA_Uncertainty:  data/jec2016/Spring16_25nsV6_DATA_Uncertainty_AK4PFchs.txt
+
+JECParTxt_MC_L2L3Residual: data/jec2016/Spring16_25nsV6_MC_L2L3Residual_AK4PFchs.txt
+JECParTxt_MC_L3Absolute:   data/jec2016/Spring16_25nsV6_MC_L3Absolute_AK4PFchs.txt
+JECParTxt_MC_L2Relative:   data/jec2016/Spring16_25nsV6_MC_L2Relative_AK4PFchs.txt
+JECParTxt_MC_L1FastJet:    data/jec2016/Spring16_25nsV6_MC_L1FastJet_AK4PFchs.txt
+JECParTxt_MC_Uncertainty:  data/jec2016/Spring16_25nsV6_MC_Uncertainty_AK4PFchs.txt
+
+JERParTxt_Reso_DATA: data/jer2016/Spring16_25nsV6_DATA_PtResolution_AK4PFchs.txt
+JERParTxt_Reso_MC:   data/jer2016/Spring16_25nsV6_MC_PtResolution_AK4PFchs.txt
+JERParTxt_SF_MC:     data/jer2016/Spring16_25nsV6_MC_SF_AK4PFchs.txt
+
+#====================================================================
+#  ╦═╗╔═╗╦ ╦╔═╗╦╔═╗╦ ╦╔╦╗  ╔╦╗╦ ╦╦╔═╗╔╦╗╔═╗
+#  ╠╦╝║╣ ║║║║╣ ║║ ╦╠═╣ ║    ║║╚╦╝║║╣  ║ ╚═╗
+#  ╩╚═╚═╝╚╩╝╚═╝╩╚═╝╩ ╩ ╩   ═╩╝ ╩╚╝╚═╝ ╩ ╚═╝
+#====================================================================
+# Add DYJet gen reweight according to 
+# unfolded 2015 data precision measurement results 
+# will also reweight LO to NLO MC samples to gain statistics.
+
+# default will use histograms for both NLO and LO reweight
+addDyZPtWeight: false
+
+# for NLO MC use function parametrization instead of hist.
+addDyZPtWeightUseFunction: true
+
+# for NLO MC use Resummation function from Resbos instead of from data.
+addDyZPtWeightUseResummationFunction: false
+
+# for LO MC to NLO, also use function  
+addDyZPtWeightLOUseFunction: true
+
+# add new DY jets gen-weights for mergeing NLO and LO
+# to gain statistics
+addDyNewGenWeight: true
+
+# input root file
+#DyZPtWeightInputFileName: data/zptweight/dyjets_zpt_weight_lo_nlo_sel.root
+DyZPtWeightInputFileName: data/zptweight/dyjets_zpt_weight_lo_nlo_genAcc.root
+
+
+
+#====================================================================
+#  ╔═╗╦╔╦╗╔═╗╦  ╔═╗  ╔╦╗╔═╗╔╦╗   
+#  ╚═╗║║║║╠═╝║  ║╣   ║║║║╣  ║    
+#  ╚═╝╩╩ ╩╩  ╩═╝╚═╝  ╩ ╩╚═╝ ╩    
+#  ╦═╗╔═╗╔═╗╔═╗╦╦    ╔╦╗╦ ╦╔╗╔╔═╗
+#  ╠╦╝║╣ ║  ║ ║║║     ║ ║ ║║║║║╣ 
+#  ╩╚═╚═╝╚═╝╚═╝╩╩═╝   ╩ ╚═╝╝╚╝╚═╝
+#====================================================================
+
+# default use histogram
+doRecoil: true
+
+# use smoothed hist
+doRecoilUseSmooth: true
+
+# use graph from smoothed hist
+doRecoilUseSmoothGraph: true
+
+# Input files
+RecoilInputFileNameData_all: data/recoil/SingleEMU_Run2016B2H_ReReco_36p46_met_para_study_dtHLT.root
+RecoilInputFileNameData_mu:  data/recoil/SingleEMU_Run2016B2H_ReReco_36p46_met_para_study_dtHLT_mu.root
+RecoilInputFileNameData_el:  data/recoil/SingleEMU_Run2016B2H_ReReco_36p46_met_para_study_dtHLT_el.root
+
+# resbos
+RecoilInputFileNameMC_all: data/recoil/DYJetsToLL_M50_BIG_ResBos_NoRecoil_met_para_study_NPUCut_effSf_trgSf.root
+RecoilInputFileNameMC_mu:  data/recoil/DYJetsToLL_M50_BIG_ResBos_NoRecoil_met_para_study_NPUCut_effSf_trgSf_mu.root
+RecoilInputFileNameMC_el:  data/recoil/DYJetsToLL_M50_BIG_ResBos_NoRecoil_met_para_study_NPUCut_effSf_trgSf_el.root
+
+RecoilInputFileNameMCLO_all: data/recoil/DYJetsToLL_M50_MGMLM_Ext1_NoRecoil_NoRhoWt_met_para_study_ZSelecLowLPt.root
+RecoilInputFileNameMCLO_mu:  data/recoil/DYJetsToLL_M50_MGMLM_Ext1_NoRecoil_NoRhoWt_met_para_study_ZSelecLowLPt_mu.root
+RecoilInputFileNameMCLO_el:  data/recoil/DYJetsToLL_M50_MGMLM_Ext1_NoRecoil_NoRhoWt_met_para_study_ZSelecLowLPt_el.root
+
+RecoilInputFileNameGJets_all: data/recoil/SinglePhoton_Run2016B2H_ReReco_36p46_ResBos_NoRecoil_met_para_study.root 
+RecoilInputFileNameGJets_mu:  data/recoil/SinglePhoton_Run2016B2H_ReReco_36p46_ResBos_NoRecoil_met_para_study_mu.root
+RecoilInputFileNameGJets_el:  data/recoil/SinglePhoton_Run2016B2H_ReReco_36p46_ResBos_NoRecoil_met_para_study_el.root
+
+
+
+#====================================================================
+#  ╦  ╔═╗╔═╗╔╦╗╔═╗╔╗╔  ╔═╗╔═╗╔═╗  ╔═╗╔═╗╦═╗╦═╗
+#  ║  ║╣ ╠═╝ ║ ║ ║║║║  ║╣ ╠╣ ╠╣   ║  ║ ║╠╦╝╠╦╝
+#  ╩═╝╚═╝╩   ╩ ╚═╝╝╚╝  ╚═╝╚  ╚    ╚═╝╚═╝╩╚═╩╚═
+#====================================================================
+addEffScale: false
+addEffScaleOnData: true
+addEMuTrgScale: false
+# input files
+EffScaleInputFileName_IdIso_El: data/eff/egammaEffi.txt_SF2D.root
+EffScaleInputFileName_Trk_El: data/eff/egammatracking.root
+EffScaleInputFileName_IdIso_Mu: data/eff/muon80x12p9.root
+EffScaleInputFileName_Trk_Mu: data/eff/muontrackingsf.root
+EffScaleInputFileName_Trg_El: data/eff/trigereff_el_b2h33fbinv.root
+EffScaleInputFileName_Trg_Mu: data/eff/trigeff_mu_datab2h33fbinv.root
+
+
+
+
+#==========================================================================================
+#
+#                             . ...
+#                         .''.' .    '.
+#                    . '' ".'.:I:.'..  '.
+#                  .'.:.:..,,:II:'.'.'.. '.
+#                .':.'.:.:I:.:II:'.'.'.'.. '.
+#              .'.'.'.'::.:.:.:I:'.'.'.'. .  '
+#             ..'.'.'.:.:I::.:II:.'..'.'..    .
+#            ..'.'':.:.::.:.::II::.'.'.'.'..   .
+#           ..'.'.'.:.::. .:::II:..'.'.'.'.'.   .
+#          .':.''.':'.'.'.:.:I:'.'.'.'.'.. '..  ..
+#          ':. '.':'. ..:.::.::.:.'..'  ':.'.'.. ..
+#         .:.:.':'.   '.:':I:.:.. .'.'.  ': .'.. . ..
+#         '..:.:'.   .:.II:.:..   . .:.'. '.. '. .  ..
+#        .. :.:.'.  .:.:I:.:. .  . ..:..:. :..':. .  '.
+#       .:. :.:.   .:.:I:.:. .    . ..:I::. :: ::  .. ..
+#       .. :'.'.:. .:.:I:'.        ..:.:I:. :: ::.   . '.
+#       '..:. .:.. .:II:'         ,,;IIIH.  ::. ':.      .
+#      .:.::'.:::..:.AII;,      .::",,  :I .::. ':.       .
+#      :..:'.:II:.:I:  ,,;'   ' .;:FBT"X:: ..:.. ':.    . .
+#     .. :':III:. :.:A"PBF;.  . .P,IP;;":: :I:..'::. .    ..
+#     . .:.:II: A.'.';,PP:" .  . ..'..' .: :.::. ':...  . ..
+#     . .: .:IIIH:.   ' '.' .  ... .    .:. :.:.. :...    .'
+#     . .I.::I:IIA.        ..   ...    ..::.'.'.'.: ..  . .
+#      .:II.'.':IA:.      ..    ..:.  . .:.: .''.'  ..  . .
+#     ..::I:,'.'::A:.  . .:'-, .-.:..  .:.::AA.. ..:.' .. .
+#      ':II:I:.  ':A:. ..:'   ''.. . : ..:::AHI: ..:..'.'.
+#     .':III.::.   'II:.:.,,;;;:::::". .:::AHV:: .::'' ..
+#     ..":IIHI::. .  "I:..":;,,,,;;". . .:AII:: :.:'  . .
+#     . . IIHHI:..'.'.'V::. ":;;;"   ...:AIIV:'.:.'  .. .
+#      . . :IIHI:. .:.:.V:.   ' ' . ...:HI:' .:: :. .  ..
+#      . .  ':IHII:: ::.IA..      .. .A .,,:::' .:.    .
+#      :.  ...'I:I:.: .,AHHA, . .'..AHIV::' . .  :     ..
+#      :. '.::::II:.I:.HIHHIHHHHHIHHIHV:'..:. .I.':. ..  '.
+#   . . .. '':::I:'.::IHHHHHHHHMHMHIHI. '.'.:IHI..  '  '  '.
+#    ':... .  ''" .::'.HMHI:HHHHMHHIHI. :IIHHII:. . . .    .
+#     :.:.. . ..::.' .IV".:I:IIIHIHHIH. .:IHI::'.': '..  .  .
+#   . .:.:: .. ::'.'.'..':.::I:I:IHHHIA.'.II.:...:' .' ... . '..
+#  '..::::' ...::'.IIHII:: .:.:..:..:III:.'::' .'    .    ..  . .
+#  '::.:' .''     .. :IIHI:.:.. ..: . .:I:"' ...:.:.  ..    .. ..
+#     .:..::I:.  . . . .IHII:.:'   .. ..".::.:II:.:. .  ...   . ..
+#  .. . .::.:.,,...-::II:.:'    . ...... . .. .:II:.::  ...  .. ..
+#   ..:.::.I .    . . .. .:. .... ...:.. . . ..:.::.   :..   . ..
+#    .'.::I:.      . .. ..:.... . ..... .. . ..::. .. .I:. ..' .
+#  .'':.: I.       . .. ..:.. .  . .. ..... .:. .:.. .:I.'.''..
+#  . .:::I:.       . . .. .:. .    .. ..  . ... .:.'.'I'  .  ...
+#  . ::.:I:..     . . . ....:. . .   .... ..   .:...:.:.:. ''.''
+#  '.'::'I:.       . .. ....:. .     .. . ..  ..'  .'.:..:..    '
+#        :. .     . .. .. .:.... .  .  .... ...   .  .:.:.:..    '.
+#        :.      .  . . .. .:.... . . ........       .:.:.::. .    .
+#        :. .     . . . . .. .::..:  . ..:.. .        ::.:.:.. .    .
+#        :.. .    . . .  . .. ..:.:  .. .. .:. ..     ':::.::.:. .   .
+#        ':.. .  . . . .. .. ...::' .. ..  . .:. .     V:I:::::.. .   :.
+#         ::. .  . .. .. ... .:.::  .. .  . .. .. .     VI:I:::::..   ''B
+#          :.. .   . .. ..:.. ..I:... . .  . .. ... .    VII:I:I:::. .'::
+#          ':.. . . . .. ..:..:.:I:.:. .  . .. . .:. .    VHIII:I::.:..':
+#           ::..   . . .. ..:..:.HI:. .      . . .... .   :HHIHIII:I::..:
+#           ':. .  . .. .. ..:.:.:HI:.    . . .. ..... .   HHHHIHII:I::.'
+#            :.. .  . . .. .:.:.:.HI:.      . . .. ... .   IHHHHIHHIHI:'
+#             :..  .  . . .. ..:..IH:.     . . .. .. ,,, . 'HHHHHHHHI:'
+#             ':..   . . .. ..:.:.:HI..   .  . .. . :::::.  MIH:"""'
+#              :. . .  . .. ..::.:.VI:.     . . .. .:::'::. HIH
+#               :..  .  . .. .:.:.:.V:.    . . . ...::I"A:. HHV
+#                :. .  .  . .. ..:.:.V:.     . . ....::I::'.HV:
+#                 :. .  . . . .. .:..II:.  . . . ....':::' AV.'
+#                  :.. . . .. ... .:..VI:. . . .. .:. ..:.AV'.
+#                  ':.. . .  .. ..:.:.:HAI:.:...:.:.:.:.AII:.
+#                   I:. .  .. ... .:.:.VHHII:..:.:..:A:'.:..
+#                   IA..  . . .. ..:.:.:VHHHHIHIHHIHI:'.::.
+#                   'HA:.  . . .. ..:.:.:HHHIHIHHHIHI:..:.
+#                    HIA: .  . . .. ...:.VHHHIHIIHI::.:...
+#                    HIHI:. .  .. ... .::.HHHIIHIIHI:::..
+#                    HII:.:.  .  .. ... .::VHHIHI:I::.:..
+#                    AI:..:..  .  . .. ..:.VHIII:I::.:. .
+#                   AI:. ..:..  .  . .. ..' VHIII:I;... .
+#                  AI:. .  .:.. .  .  . ...  VHIII::... .
+#                .A:. .      :.. .  . .. .:.. VHII::..  .
+#               A:. . .       ::. .. .. . .:.. "VHI::.. .
+#             .:.. .  .        :.. .:..... .::.. VHI:..
+#            ... . .  .     . . :.:. ..:. . .::.. VI:..  .
+#           .. .. .  .    . . ...:... . .. . .:::. V:..  .
+#          '.. ..  .   .  .. ..:::.... .:. . ..::.. V..  .
+#        . . .. . .   . . .. ..:::A. ..:. . . .::.. :..
+#       . .. .. .. . .  . ... ..::IA.. .. . .  ..::. :..  .
+#      .. .. ... . .  .. .... .:.::IA. . .. . ..:.::. :.  .
+#     . . . .. .   . . .. ..:..:.::IIA. . .  .. .:.::. :. .
+#    .. . .  .   . . .. ... ..:.::I:IHA. .  . . ..:.::. . .
+#   .: ..  .  .   . . ... .:.. .:I:IIHHA. .  . .. .::I:. .
+#  .::.  .     . . .. ..:. .::.:IIHIIHHHA.  .  .. ..:I:. . .
+#  A::..      .  .  ...:..:.::I:IHIHIHHHHA.  .  . ..::I:. .
+# :HI:.. .       . .. .:.:.::I:IHIHIIHIHHHA. .   .. .::I:. ..
+# AI:.. .. .    . .. .:.:.::II:IHIIIHIHIHHHA.  .  . ..::I:. ..
+#:HI:.. . .   .  . .. .::.:I:IHIHIIIHIHIIHHHA..  . .. .::I:. ..
+#AI:.:.. .  .  .  ... .::.::I:IHIIHIHIHIHIHIHHA. .  . ..::I:. .
+#HI:. .. . .  .  . .. .:..::IIHIHIHIIIIWHIIHHMWA.  . . .:::I:. . .
+#HI:.. . .  .   . .. ..:.::I:IIHHIIHIHIHIHHMMW"  '.. . ..:::II: . .
+#HI::.. .  .   .  .. .:..:::IIHIHIIWIWIIWMWW" .    .. . ..::III: .  .
+#HI::... . . .  . ... ..:.:::IIHIWIWIWMWMWW. .  .   . .. .:.:III. .   .
+#II::.:.. . .  .  .. ......:..IHWHIWWMWMW".. . . . . '... .:.:IHI:..    .
+#II:I::.. .  .   .  . .....::.:IHWMWWWMW:.. .  .  . .  .:..:::IIHII..
+#:II:.:.:.. .  .   . ......:.:.:IWWMWWW:.:.. .  .  .  . :...:.:IHHI:..
+# HI::.:. . . .  .  . ...:.::.::.VWMWW::.:.:.. .  . .. . :.. ..:IHHI::.'-
+# HII::.:.. .  .  . .. .:..:.'.  'WWWI::.::.:.. . .  . .. ':...:II:IIII::
+# III::.:... .  .  . ...:.:... .   WII:I::.:.. .  .  .. . . :.:::...::.::
+#  VII::.:.. . . . .. ...:....      VHI:I::.:.. .  . ... .. .::.:..:.:..:
+#   VII::.:.. . .  . ..:.::.. .     :HHII:I::.:.. . . .. ..  .'::':......
+#   III:I::.. .. . . .. .:.:.. .    :VHIHI:I::.:... . . .. .. .':. .. .AH
+#  AA:II:I::.. . . .  .. ..:.. . .  ::HHIHII:I::.:... .. .. ... .:.::AHHH
+# AHH:I:I::.:.. .  . .. ..:.:.. .   ::VHHHVHI:I::.:.:.. ..:. .::.A:.AHHHM
+# HHHAII:I::.:.. . . . .. ..:.. . . :::HIHIHIHII:I::.:.. .. .:. ..AHHMMM:
+#AHHHH:II:I::.:.. . . .. ..:.:.. . .:I:MMIHHHIHII:I:::.:. ..:.:.AHHHMMM:M
+#HHHHHA:II:I::.. .. . . .. .:... . .:IIVMMMHIHHHIHII:I::. . .. AHHMMMM:MH
+#HHHHHHA:I:I:::.. . . . ... ..:.. ..:IHIVMMHHHHIHHHIHI:I::. . AHMMMMM:HHH
+#HHHHHMM:I::.:.. . . . .. ...:.:...:IIHHIMMHHHII:.:IHII::.  AHMMMMMM:HHHH
+#HHHHHMMA:I:.:.:.. . . . .. ..:.:..:IIHHIMMMHHII:...:::.:.AHMMMMMMM:HHHHH
+#HHHHHMMMA:I::... . . . . .. ..:.::.:IHHHIMMMHI:.:.. .::AHMMMMMMM:HHHHHHH
+#VHHHHMMMMA:I::.. . .  . . .. .:.::I:IHHHIMMMMHI:.. . AHMMMMMMMM:HHHHHHHH
+# HHHMMMMMM:I:.:.. . .  . . ...:.:IIHIHHHIMMMMMHI:.AHMMMMMMMMM:HHHHHHHHHH
+# HHHHMMMMMA:I:.:.. .  .  . .. .:IIHIHHHHIMMMMMH:AMMMMMMMMMMM:HHHHHHHHHHH
+# VHHHMMMMMMA:I:::.:. . . . .. .:IHIHHHHHIMMMV"AMMMMMMMMMMMM:HHHHHHHHHHHH
+#  HHHHHMMMMMA:I::.. .. .  . ...:.:IHHHHHHIM"AMMMMMMMMMMMM:HHHHHHHHHHHHHH
+#  VHHHHHMMMMMA:I:.:.. . . .  .. .:IHIHHHHI:AMMMMMMMMMMMIHHHHHHHHHHHHHHHH
+#   VHHHHHMMMMMA:I::.:. . .  .. .:.:IHHHV:MMMMMIMMMMMMMMMMMMMHHHHHHHHV::.
+#    VHHHHMMMMMMA:::.:..:.. . .. .:::AMMMMMMMM:IIIIIHHHHHHHHHHHHHHHV:::..
+#     HHHHHMMMIIIA:I::.:.:..:... AMMMMMMMMMM:IIIIIIHHHHHHHHHHHHHHHV::::::
+#     VHHHHMMIIIIMA:I::::.::..AMMMMMMMMMMM:IIIIIIIHHHHHHHHHHHHHHV::::::::
+#      HHHHMIIIIMMMA:II:I::AIIIMMMMMMMMMM:IIIIIIIHHHHHHHHHHHHHHV:::::::::
+#      VHHHHIIIMMMMMMA:I:AIIIIIIMMMMMM:IIIIIIIIHHHHHHHHHHHHHHV::::::::"'
+#       HHHHHIIMMMMMMIMAAIIIIIIIIMMM:IIIIIIIIHHHHHHHHHHHHHHHV:::::""'
+#       VHHHIIIIMMMMIIIIIIIIIIIIII:IIIIIIIIHHHHHHHHHHHHHHHV::""'
+#        VHHIIIMMMMMIIIIIIIIIIIIIIIIIIIIIHHHHHHHHHHHHHHHV
+#         VHHIMMMMMMMIIIIIIIIIIIIIIIIIHHHHHHHHHHHHHV
+#          VHHHMMMMMMMMIIIIIIIIIIIHHHHHHHHHHHV
+#           VHHHMMMMMMMMMMMMMHHHHHHHHHHHHHV

@@ -1,0 +1,54 @@
+#!/bin/sh
+
+#id="0"; for dd in SinglePhoton_Run2016*; do ln -s $dd SinglePhoton_Run2016Full_ReReco_v2_Chunk${id}; id=$(( id + 1 )); done
+
+
+ln -s GJets_HT100to200 GJets_HT100to200_BIG_Chunk0
+ln -s GJets_HT100to200_ext GJets_HT100to200_BIG_Chunk1
+ln -s GJets_HT200to400 GJets_HT200to400_BIG_Chunk0
+ln -s GJets_HT200to400_ext GJets_HT200to400_BIG_Chunk1
+ln -s GJets_HT400to600 GJets_HT400to600_BIG_Chunk0
+ln -s GJets_HT400to600_ext GJets_HT400to600_BIG_Chunk1
+ln -s GJets_HT40to100 GJets_HT40to100_BIG_Chunk0
+ln -s GJets_HT40to100_ext GJets_HT40to100_BIG_Chunk1
+ln -s GJets_HT600toInf GJets_HT600toInf_BIG_Chunk0
+ln -s GJets_HT600toInf_ext GJets_HT600toInf_BIG_Chunk1
+cp -rp QCD_Pt120to170_EMEnriched QCD_Pt120to170_EMEnriched_BIG
+cp -rp QCD_Pt170to300_EMEnriched QCD_Pt170to300_EMEnriched_BIG
+cp -rp QCD_Pt20to30_EMEnriched QCD_Pt20to30_EMEnriched_BIG
+cp -rp QCD_Pt300toInf_EMEnriched QCD_Pt300toInf_EMEnriched_BIG
+ln -s QCD_Pt30to50_EMEnriched QCD_Pt30to50_EMEnriched_BIG_Chunk0
+ln -s QCD_Pt30to50_EMEnriched_ext QCD_Pt30to50_EMEnriched_BIG_Chunk1
+cp -rp QCD_Pt50to80_EMEnriched_ext QCD_Pt50to80_EMEnriched_ext_BIG
+ln -s QCD_Pt80to120_EMEnriched QCD_Pt80to120_EMEnriched_BIG_Chunk0
+ln -s QCD_Pt80to120_EMEnriched_ext QCD_Pt80to120_EMEnriched_BIG_Chunk1
+ln -s TGJets TGJets_BIG_Chunk0
+ln -s TGJets_ext TGJets_BIG_Chunk1
+ln -s TTGJets TTGJets_BIG_Chunk0
+ln -s TTGJets_ext TTGJets_BIG_Chunk1
+ln -s WJetsToLNu_HT100to200 WJetsToLNu_HT100to200_BIG_Chunk0
+ln -s WJetsToLNu_HT100to200_ext1 WJetsToLNu_HT100to200_BIG_Chunk1
+ln -s WJetsToLNu_HT100to200_ext2 WJetsToLNu_HT100to200_BIG_Chunk2
+ln -s WJetsToLNu_HT1200to2500 WJetsToLNu_HT1200to2500_BIG_Chunk0
+ln -s WJetsToLNu_HT1200to2500_ext1 WJetsToLNu_HT1200to2500_BIG_Chunk1
+ln -s WJetsToLNu_HT200to400 WJetsToLNu_HT200to400_BIG_Chunk0
+ln -s WJetsToLNu_HT200to400_ext1 WJetsToLNu_HT200to400_BIG_Chunk1
+ln -s WJetsToLNu_HT200to400_ext2 WJetsToLNu_HT200to400_BIG_Chunk2
+ln -s WJetsToLNu_HT2500toInf WJetsToLNu_HT2500toInf_BIG_Chunk0
+ln -s WJetsToLNu_HT2500toInf_ext1 WJetsToLNu_HT2500toInf_BIG_Chunk1
+ln -s WJetsToLNu_HT400to600 WJetsToLNu_HT400to600_BIG_Chunk0
+ln -s WJetsToLNu_HT400to600_ext1 WJetsToLNu_HT400to600_BIG_Chunk1
+ln -s WJetsToLNu_HT600to800 WJetsToLNu_HT600to800_BIG_Chunk0
+ln -s WJetsToLNu_HT600to800_ext1 WJetsToLNu_HT600to800_BIG_Chunk1
+ln -s WJetsToLNu_HT800to1200 WJetsToLNu_HT800to1200_BIG_Chunk0
+ln -s WJetsToLNu_HT800to1200_ext1 WJetsToLNu_HT800to1200_BIG_Chunk1
+ln -s ZJetsToNuNu_HT100to200 ZJetsToNuNu_HT100to200_BIG_Chunk0
+ln -s ZJetsToNuNu_HT100to200_ext ZJetsToNuNu_HT100to200_BIG_Chunk1
+ln -s ZJetsToNuNu_HT1200to2500 ZJetsToNuNu_HT1200to2500_BIG_Chunk0
+ln -s ZJetsToNuNu_HT1200to2500_ext ZJetsToNuNu_HT1200to2500_BIG_Chunk1
+ln -s ZJetsToNuNu_HT200to400 ZJetsToNuNu_HT200to400_BIG_Chunk0
+ln -s ZJetsToNuNu_HT200to400_ext ZJetsToNuNu_HT200to400_BIG_Chunk1
+cp -rp ZJetsToNuNu_HT2500toInf ZJetsToNuNu_HT2500toInf_BIG
+cp -rp ZJetsToNuNu_HT400to600 ZJetsToNuNu_HT400to600_BIG
+cp -rp ZJetsToNuNu_HT600to800 ZJetsToNuNu_HT600to800_BIG
+cp -rp ZJetsToNuNu_HT800t1200 ZJetsToNuNu_HT800t1200_BIG

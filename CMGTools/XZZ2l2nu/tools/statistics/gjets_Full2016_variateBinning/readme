@@ -1,0 +1,12 @@
+
+1. setup cards and shapes
+
+   python createXZZ2l2nuWorkspace.py
+
+2. run limit
+
+   sh run1D.sh
+
+3. plot
+
+   python plotLimit.py

@@ -1,0 +1,42 @@
+-- Command: ./study_gjet.exe
+Info in <TCanvas::Print>: pdf file study_gjets_data_fullv2.pdf has been created
+Using customized style
+gdataYield = 3402037584.2277574539
+zjetsFidXsecAll = 72.31330890818101409
+zjetsFidXsecEl =  1.8368830484768923217
+zjetsFidXsecMu =  70.413868731825942859
+zjetsFidXsecAll_up = 73.317313237038433726
+zjetsFidXsecAll_dn = 71.318806854104892068
+zjetsFidXsecEl_up = 1.9004022884222013801
+zjetsFidXsecEl_dn = 1.7743842806529528389
+zjetsFidXsecMu_up = 71.35227312468455807
+zjetsFidXsecMu_dn = 69.483913323296292219
+zjetsFidXsecLowLptAll = 1119.9216265291902346
+zjetsFidXsecLowLptEl = 459.14012486577632899
+zjetsFidXsecLowLptMu = 660.78150166340503802
+
+Info in <TCanvas::Print>: Current canvas added to pdf file study_gjets_data_fullv2.pdf
+Info in <TCanvas::Print>: Current canvas added to pdf file study_gjets_data_fullv2.pdf
+Info in <TCanvas::Print>: Current canvas added to pdf file study_gjets_data_fullv2.pdf
+zjetsFidXsecEl =  1.8368830484768923217
+Info in <TCanvas::Print>: Current canvas added to pdf file study_gjets_data_fullv2.pdf
+Info in <TCanvas::Print>: Current canvas added to pdf file study_gjets_data_fullv2.pdf
+zjetsFidXsecMu =  70.413868731825942859
+Info in <TCanvas::Print>: Current canvas added to pdf file study_gjets_data_fullv2.pdf
+Info in <TCanvas::Print>: Current canvas added to pdf file study_gjets_data_fullv2.pdf
+zjetsFidXsecAll_up = 73.317313237038433726
+zjetsFidXsecAll_dn = 71.318806854104892068
+zjetsFidXsecEl_up = 1.9004022884222013801
+zjetsFidXsecEl_dn = 1.7743842806529528389
+zjetsFidXsecMu_up = 71.35227312468455807
+zjetsFidXsecMu_dn = 69.483913323296292219
+zjetsFidXsecLowLptAll = 1119.9216265291902346
+Info in <TCanvas::Print>: Current canvas added to pdf file study_gjets_data_fullv2.pdf
+Info in <TCanvas::Print>: Current canvas added to pdf file study_gjets_data_fullv2.pdf
+zjetsFidXsecLowLptEl = 459.14012486577632899
+Info in <TCanvas::Print>: Current canvas added to pdf file study_gjets_data_fullv2.pdf
+Info in <TCanvas::Print>: Current canvas added to pdf file study_gjets_data_fullv2.pdf
+zjetsFidXsecLowLptMu = 660.78150166340503802
+Info in <TCanvas::Print>: Current canvas added to pdf file study_gjets_data_fullv2.pdf
+Info in <TCanvas::Print>: Current canvas added to pdf file study_gjets_data_fullv2.pdf
+Info in <TCanvas::Print>: Current canvas added to pdf file study_gjets_data_fullv2.pdf
