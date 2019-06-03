@@ -37,6 +37,24 @@ pfMassDecorrelatedDeepBoostedDiscriminatorsJetTags = cms.EDProducer(
          ),
 
       cms.PSet(
+         name = cms.string('ZvsQCD'),
+         numerator = cms.VInputTag(
+            cms.InputTag('pfMassDecorrelatedDeepBoostedJetTags', 'probZbb'),
+            cms.InputTag('pfMassDecorrelatedDeepBoostedJetTags', 'probZcc'),
+            cms.InputTag('pfMassDecorrelatedDeepBoostedJetTags', 'probZqq'),
+            ),
+         denominator = cms.VInputTag(
+            cms.InputTag('pfMassDecorrelatedDeepBoostedJetTags', 'probWcq'),
+            cms.InputTag('pfMassDecorrelatedDeepBoostedJetTags', 'probWqq'),
+            cms.InputTag('pfMassDecorrelatedDeepBoostedJetTags', 'probQCDbb'),
+            cms.InputTag('pfMassDecorrelatedDeepBoostedJetTags', 'probQCDcc'),
+            cms.InputTag('pfMassDecorrelatedDeepBoostedJetTags', 'probQCDb'),
+            cms.InputTag('pfMassDecorrelatedDeepBoostedJetTags', 'probQCDc'),
+            cms.InputTag('pfMassDecorrelatedDeepBoostedJetTags', 'probQCDothers'),
+            ),
+         ),
+
+      cms.PSet(
          name = cms.string('ZHbbvsQCD'),
          numerator = cms.VInputTag(
             cms.InputTag('pfMassDecorrelatedDeepBoostedJetTags', 'probZbb'),
