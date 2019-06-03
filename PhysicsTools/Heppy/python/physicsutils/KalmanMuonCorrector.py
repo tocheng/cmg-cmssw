@@ -20,7 +20,7 @@ class KalmanMuonCorrector:
                 newPt = self.kamuca.smear(newPt, mu.eta())
                 newPtErr = newPt * self.kamuca.getCorrectedError(newPt, mu.eta(), newPtErr/newPt)
             else:
-                newPt = self.kamuca.smearUsingEbE(newPt, mu.eta(), newPtErr/newPt)
+                newPt = self.kamuca.smear(newPt, mu.eta())#smearUsingEbE(newPt, mu.eta(), newPtErr/newPt)
                 newPtErr = newPt * self.kamuca.getCorrectedError(newPt, mu.eta(), newPtErr/newPt)
         newP4 = ROOT.math.PtEtaPhiMLorentzVector(newPt, mu.eta(), mu.phi(), mu.mass())
         mu.setP4(newP4)

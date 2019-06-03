@@ -1,11 +1,49 @@
 from PhysicsTools.Heppy.physicsobjects.Lepton import Lepton
 from PhysicsTools.HeppyCore.utils.deltar import deltaR
-
+import ROOT
 class Muon( Lepton ):
 
     def __init__(self, *args, **kwargs):
         super(Muon, self).__init__(*args, **kwargs)
         self._trackForDxyDz = "muonBestTrack"
+        self._muonUseTuneP = False
+        # store pf muon and tunep muon 4vectors for inter-change
+        self._pf_muon_p4 = ROOT.math.PtEtaPhiMLorentzVector(self.physObj.pt(),
+                        self.physObj.eta(),
+                        self.physObj.phi(),
+                        self.physObj.mass())
+        self._tunep_muon_p4 = ROOT.math.PtEtaPhiMLorentzVector(self.physObj.tunePMuonBestTrack().pt(),
+                        self.physObj.tunePMuonBestTrack().eta(),
+                        self.physObj.tunePMuonBestTrack().phi(),
+                        self.physObj.mass()) if self.physObj.tunePMuonBestTrack() else self._pf_muon_p4
+
+    def setMuonUseTuneP(self,muonUseTuneP=True):
+        # Comments by Hengne Li:
+        # restore the corresponding p4 when pfmuon and tunep muon are inter-changed
+        # only do the exchange when necessary..
+        if muonUseTuneP and not self._muonUseTuneP:
+            self.physObj.setP4(self._tunep_muon_p4)
+        elif not muonUseTuneP and self._muonUseTuneP:
+            self.physObj.setP4(self._pf_muon_p4)
+        self._muonUseTuneP = muonUseTuneP
+
+    def setP4(self,newP4):
+        # Comments by Hengne Li:
+        #  when you re-calib the p4, will apply to the corrent physObj,
+        # and will also change the pfmuon/tunepmuon internal p4 accordingly
+        # e.g. if you re-calib muon when muonUseTuneP is True, it will also
+        # apply the re-calib to the internal tunepmuon, but will NOT change
+        # the internal pfmuon p4.
+        # So, if you want to recalib both, you need to setMuonUseTuneP(True/False),
+        #  and calibrate once more.
+        # and due to tricky problems, one has to redefine a PtEtaPhiMLorentzVector
+        self.physObj.setP4(newP4)
+        newP4 = ROOT.math.PtEtaPhiMLorentzVector(self.physObj.pt(),
+                        self.physObj.eta(),
+                        self.physObj.phi(),
+                        self.physObj.mass())
+        if self._muonUseTuneP: self._tunep_muon_p4 = newP4
+        else: self._pf_muon_p4 = newP4
 
     def setTrackForDxyDz(self,what):
         if not hasattr(self,what):
