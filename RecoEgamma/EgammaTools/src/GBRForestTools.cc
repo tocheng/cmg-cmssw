@@ -1,5 +1,4 @@
 #include "RecoEgamma/EgammaTools/interface/GBRForestTools.h"
-#include "FWCore/Utilities/interface/Exception.h"
 
 #include <iostream>
 #include <fstream>
@@ -12,7 +11,7 @@ namespace {
     int found = 0;
     for (unsigned int i=0 ; i<nth ; ++i) {
         std::size_t pos = haystack.find(needle, found);
-        if (pos == std::string::npos) return -1;
+        if (pos == std::string::npos) return -1; 
         else found = pos+1;
     }
     return found;
@@ -28,33 +27,13 @@ namespace {
 
 };
 
-// Creates a pointer to new GBRForest corresponding to a TMVA weights file,
-// given a file path as string.  When the file is not found, also the same name
-// appended with ".gz" and ".gzip" is tried.  This allows the maintainters of
-// the data repositories to gzip weight files a posteriori without changing
-// anything else.
-std::unique_ptr<const GBRForest> GBRForestTools::createGBRForest(const std::string &weightFile,
-                                                                 std::vector<std::string> &varNames){
-
-  std::string gzipExtensions[3] = {"gz", "gzip"};
-
-  for(const std::string &gzipExt : gzipExtensions) {
-    try {
-        edm::FileInPath weightFileEdm(weightFile + "." + gzipExt);
-        return GBRForestTools::createGBRForest(weightFileEdm, varNames);
-    } catch (cms::Exception& e) {
-        if (e.category() == "FileInPathError") continue;
-        else throw e;
-    }
-  }
-
+std::unique_ptr<const GBRForest> GBRForestTools::createGBRForest(const std::string &weightFile){
   edm::FileInPath weightFileEdm(weightFile);
-  return GBRForestTools::createGBRForest(weightFileEdm, varNames);
+  return GBRForestTools::createGBRForest(weightFileEdm);
 }
 
 // Creates a pointer to new GBRForest corresponding to a TMVA weights file
-std::unique_ptr<const GBRForest> GBRForestTools::createGBRForest(const edm::FileInPath &weightFile,
-                                                                 std::vector<std::string> &varNames){
+std::unique_ptr<const GBRForest> GBRForestTools::createGBRForest(const edm::FileInPath &weightFile){
 
   std::string method;
 
@@ -64,7 +43,7 @@ std::unique_ptr<const GBRForest> GBRForestTools::createGBRForest(const edm::File
   std::vector<float> dumbVars;
   std::vector<float> dumbSpecs;
 
-  varNames.clear();
+  std::vector<std::string> varNames;
   std::vector<std::string> specNames;
 
   std::string line;
@@ -81,9 +60,7 @@ std::unique_ptr<const GBRForest> GBRForestTools::createGBRForest(const edm::File
       tmpstr = "";
   } else if (reco::details::hasEnding(weightFile.fullPath(), ".gz") || reco::details::hasEnding(weightFile.fullPath(), ".gzip")) {
       gzipped = true;
-      char *buffer = reco::details::readGzipFile(weightFile.fullPath());
-      tmpstr = std::string(buffer);
-      free(buffer);
+      tmpstr = std::string(reco::details::readGzipFile(weightFile.fullPath()));
   }
   std::stringstream is(tmpstr);
 
@@ -157,14 +134,4 @@ std::unique_ptr<const GBRForest> GBRForestTools::createGBRForest(const edm::File
   delete mvaReader;
 
   return gbrForest;
-}
-
-std::unique_ptr<const GBRForest> GBRForestTools::createGBRForest(const std::string &weightFile){
-  std::vector<std::string> varNames;
-  return GBRForestTools::createGBRForest(weightFile, varNames);
-}
-
-std::unique_ptr<const GBRForest> GBRForestTools::createGBRForest(const edm::FileInPath &weightFile){
-    std::vector<std::string> varNames;
-    return GBRForestTools::createGBRForest(weightFile, varNames);
 }
