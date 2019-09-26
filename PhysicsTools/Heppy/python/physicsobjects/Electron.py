@@ -348,13 +348,13 @@ class Electron( Lepton ):
 
     def id_passes(self, name, wp):
         '''returns True if the electron passes the given working point of the identification'''
-        id = name + '-' + wp
-        if id not in self._mvaid_passed :
+        _id = name + '-' + wp
+        if _id not in self._mvaid_passed :
             miniAODids = [miniAODid[0] for miniAODid in self.electronIDs()]
-            if id in miniAODids :
-                passed = self.electronIDs()[miniAODids.index(id)][1]
-            elif id in wps_dict.keys() :
-                FWLitename, FWLitewp = wps_dict[id]
+            if _id in miniAODids :
+                passed = self.electronIDs()[miniAODids.index(_id)][1]
+            elif _id in wps_dict.keys() :
+                FWLitename, FWLitewp = wps_dict[_id]
                 if 'cutBased' in name :
                     passed = electron_cut_based_IDs[FWLitename].passed(
                         self.physObj,
@@ -372,13 +372,13 @@ class Electron( Lepton ):
                         )
             else:
                 raise RuntimeError(
-                    "Electron id " + id \
+                    "Electron id " + _id \
                         + " not yet implemented in Electron.py, availables are:" \
                         + "\n\n from miniAOD:\n {}".format(miniAODids) \
                         + "\n\n from FWLite:\n {}".format(wps_dict.keys())
                     )
-            self._mvaid_passed[id] = 1. if passed else 0.
-        return self._mvaid_passed[id]
+            self._mvaid_passed[_id] = 1. if passed else 0.
+        return self._mvaid_passed[_id]
 
     def countWP(self,name,WPs=None,skipMissing=False):
         '''Returns the number of Working Points 

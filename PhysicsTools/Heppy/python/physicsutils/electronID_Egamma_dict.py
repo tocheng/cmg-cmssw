@@ -29,6 +29,9 @@ wps_dict = {
   "mvaEleID-Spring15-25ns-nonTrig-V1-wpLoose": ("Spring15NonTrig25nsV1", "wpLoose"),
   "mvaEleID-Spring15-25ns-nonTrig-V1-wp90"   : ("Spring15NonTrig25nsV1", "wp90"),
   "mvaEleID-Spring15-25ns-nonTrig-V1-wp80"   : ("Spring15NonTrig25nsV1", "wp80"),
+  # for HZZ
+  "mvaEleID-Fall17-iso-V2-wpHZZ"             : ("Fall17IsoV2","wpHZZ"),
+
 }
 
 methods_dict = {
